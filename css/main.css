@@ -370,97 +370,6 @@ i {
 
 
 
-/* Recruit */
-#recruit, #blog {
-    width: 100vw;
-    background-color: #000000;
-    position: relative;
-}
-
-.recruit-bg, .blog-bg {
-    width: 100vw;
-    height: 475px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.recruit-bg {
-    background-image: url("../images/recruit-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.blog-bg {
-    background-image: url("../images/hero-0.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.overlay {
-    background-color: rgba(0, 0, 0, .7);
-    width: 100%;
-    height: inherit;
-    position: absolute;
-}
-
-.recruit-wrapper, .blog-wrapper {
-    text-align: center;
-    width: 100%;
-    max-width: 720px;
-    z-index: 2;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.recruit-wrapper, .blog-wrapper {
-    color: #ffffff;
-}
-
-.recruit-h2 {
-    white-space: normal;
-    margin: 0 0 16px 0;
-    min-width: 600px;
-}
-
-.recruit-wrapper p {
-    white-space: pre-line;
-}
-
-.button-w {
-    background-color: #ffffff;
-    color: #000000;
-    font-weight: 400;
-    margin: 32px 0 0 0;
-    width: 200px;
-    border: none;
-}
-
-.button-w:hover {
-    background-color: #000000;
-    border: #fff 2px solid;
-    color: #ffffff;
-}
-
-.button-b {
-    background-color: #000000;
-    color: #ffffff;
-    font-weight: 400;
-    margin: 32px 0 0 0;
-    width: 200px;
-    border: none;
-}
-
-.button-b:hover {
-    background-color: #ffffff;
-    border: #000 2px solid;
-    color: #000000;
-}
 
 
 
@@ -476,22 +385,8 @@ i {
         font-size: 1em;
     }
 
-    #hiring {
-        top: 80px;
-        right: 80px;
-    }
-
-    .info-wrapper, .inner {
-        max-width: 1280px;
+    .inner {
         transform: scale3d(0.8, 0.8, 1);
-    }
-
-    .info-text {
-        width: 580px;
-    }
-
-    .first-img, .second-img {
-        width: 280px;
     }
 
     .bi {
@@ -502,154 +397,21 @@ i {
         height: 66px;
     }
 
-    .recruit-bg, .blog-bg {
-        height: 400px;
-        background-size: cover;
-    }
-
-    .recruit-wrapper, .blog-wrapper {
-        transform: scale3d(0.8, 0.8, 1);
-    }
-
-    #footer {
-        padding: 3em 0 3em 0;
-    }
 }
 
 @media screen and (max-width: 1280px) {
-    .info-wrapper, .inner {
+    .inner {
         transform: scale3d(0.8, 0.8, 1);
     }
 }
 
 @media screen and (max-width: 1028px) {
-    .info-wrapper, .inner {
+    .inner {
         max-width: 1028px;
     }
 }
 
 @media screen and (max-width: 768px) {
    
-    /* Section 2 - What we do */
-    .section-wrapper {
-        padding: 60px 32px;
-        height: auto;
-    }
 
-    .info-wrapper {
-        display: flex;
-        flex-direction: column;
-        transform: scale3d(1, 1, 1);
-    }
-
-    .info-text {
-        width: 100%;
-        margin-top: 32px;
-        margin-right: 0;
-    }
-
-    h2 {
-        font-size: 32px;
-        margin: 16px 0 0 0;
-    }
-
-    .info-title {
-        white-space: pre-line;
-        margin-bottom: 0;
-    }
-
-    .info-title p {
-        margin: -10px 0 10px 0;
-    }
-
-    .info-p {
-        line-height: 24px;
-        font-size: 16px;
-    }
-
-    .pwbi {
-        width: 128px;
-        height: 32px;
-    }
-
-    .kytebi {
-        width: 66px;
-        height: 48px;
-    }
-
-    .info-img {
-        width: 100%;
-        display: inline-block;
-    }
-
-    .first-img {
-        width: 226px;
-        height: 458px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        filter: drop-shadow(0 16px 16px rgba(0, 0, 0, .3));
-    }
-
-    .second-img {
-        display: none;
-    }
-
-    .info-button {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        flex-wrap: nowrap;
-        margin-top: 40px;
-    }
-
-    button {
-        width: 150px;
-    }
-
-    .button1 {
-        margin-right: 8px;
-    }
-
-    .social-box {
-        display: flex;
-        flex-direction: row;
-        margin-top: 16px;
-    }
-
-    .social-box:first-child {
-        margin-right: 0;
-    }
-
-    /* Section 3 - Recruit */
-    .recruit-wrapper, .blog-wrapper {
-        padding: 0 32px;
-        transform: scale3d(1, 1, 1)
-    }
-
-    .recruit-wrapper p, .blog-wrapper p {
-        white-space: normal;
-        word-break: keep-all;
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    .recruit-h2 {
-        white-space: pre-line;
-        min-width: 100%;
-    }
-
-    .recruit-bg {
-        height: 543px;
-        max-height: 736px;
-        background-image: url("../images/recruit-bg-s.jpg");
-    }
-
-    .blog-bg {
-        height: 543px;
-        max-height: 736px;
-    }
 }
