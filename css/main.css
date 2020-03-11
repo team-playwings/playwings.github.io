@@ -421,8 +421,6 @@ i {
     /* Intro */  
     #main-wrapper{
         background-image: url(../images/bg_cover-s.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     #main-container{
