@@ -423,7 +423,7 @@ button:last-child{
 
     /* Intro */  
     #main-wrapper{
-
+        background-size: contain;
     }
     
     #main-contents{
