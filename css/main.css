@@ -129,8 +129,6 @@ p {
     justify-content: center;
 }
 
-.main-title{
-}
 
 
 /* Mouse wheeling */
@@ -179,7 +177,6 @@ button {
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: 400;
-    margin: 0 0 20px 0;
     font-family: 'Spoqa Han Sans', 'Malgun Gothic', sans-serif;
     transition: all 0.15s ease-out;
     display: inline-flex;
@@ -203,7 +200,7 @@ i {
 }
 
 .button1 {
-    margin-right: 8px;
+    margin-right: 16px;
 }
 
 button:last-child{
