@@ -242,6 +242,10 @@ button:last-child{
 
 }
 
+.title-center{
+    display: none;
+}
+
 .content-title img{
     width: 410px;
     height: 120px;
@@ -453,20 +457,48 @@ button:last-child{
     }
 
     /* Contents */
+    .row{
+        height: auto;
+    }
+
     .section-wrapper{
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 900px;
         background-color: beige;
+        align-items: flex-start;
+        justify-content: center;
     }
 
     .section-contents{
-        padding: 0 24px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 
     .content-title{
         width:100%;
+        margin: 56px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-desc{
+        width:100vw;
+        text-align: center;
+        white-space: pre-line;
+    }
+
+    .br{
+        display: none;
+    }
+
+    .title-center{
+        display: block;
+    }
+
+    .title-left{
+        display: none;
     }
 
     .content-title img{
@@ -474,6 +506,97 @@ button:last-child{
         height: 69px;
         margin-top: 0px;
     }
+
+    .content-desc{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-text{
+        width: 100vw;
+        height: 150px;
+        text-align: center;
+        font-size: 1em;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-box{
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .btn-box button{
+        text-align: center;
+        font-size: 0.9em;
+        width: 20%;
+        margin: 0 8px 0 0;
+    }
+
+    .btn-box button:nth-child(1).active ~ .active-bar{
+        left: 20px;
+        opacity: 1;
+    }
+    
+    .btn-box button:nth-child(2).active ~ .active-bar{
+        left: 28%;
+        opacity: 1;
+    }
+    
+    .btn-box button:nth-child(3).active ~ .active-bar{
+        left: 50%;
+        opacity: 1;
+    }
+    
+    .btn-box button:nth-child(4).active ~ .active-bar{
+        left: 72%;
+        opacity: 1;
+    }
+
+    .active-bar{
+        position: absolute;
+        width: 18%;
+        border-bottom: 3px solid #000;
+        transition: 0.3s;
+        opacity: 0;
+    }
+
+    .content-img{
+        width: 100vw;
+        position: relative;
+    }
+    
+    .device{
+        width: 100vw;
+        height: auto;
+
+    }
+    
+    .screenshot{
+        position: absolute;
+        width: 300px;
+        height: 650px;
+        top: 104px;
+        right: 110px;
+        overflow: hidden;
+    }
+    
+    .slide{
+        position: absolute;
+        transform: translateX(300px);
+        width: 300px;
+        height: 650px;
+        transition: all 0.3s ease;
+    }
+    
+    #slide-1{
+        transform: translateX(0px);
+    }
+
+
 
     
     
