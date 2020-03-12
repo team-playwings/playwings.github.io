@@ -336,6 +336,11 @@ button:last-child{
     z-index: 100;
 }
 
+.device-img{
+    width: 530px;
+    height: 872px;
+}
+
 .screenshot{
     position: absolute;
     width: 300px;
@@ -463,8 +468,7 @@ button:last-child{
 
     .section-wrapper{
         width: 100vw;
-        height: 900px;
-        background-color: beige;
+        height: 1160px;
         align-items: flex-start;
         justify-content: center;
     }
@@ -473,14 +477,18 @@ button:last-child{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        position: relative;
     }
 
     .content-title{
         width:100%;
-        margin: 56px 0;
+        margin: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-color: #fafafa;
+        padding: 56px 24px;
+        position: relative;
     }
 
     .title-desc{
@@ -511,16 +519,21 @@ button:last-child{
         width: 100vw;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 24px;
+        word-break: break-all;
+        position: relative;
     }
 
     .content-text{
-        width: 100vw;
+        width: 100%;
         height: 100px;
         text-align: center;
-        font-size: 1em;
+        font-size: 0.9em;
         display: flex;
         justify-content: center;
+        padding: 0 24px;
     }
 
     .btn-box{
@@ -532,63 +545,73 @@ button:last-child{
     .btn-box button{
         text-align: center;
         font-size: 0.9em;
-        width: 20%;
-        margin: 0 8px 0 0;
+        width: 25%;
+        margin-right: 5%;
+    }
+
+    .btn-box button:nth-child(4){
+        margin-right: 0;
     }
 
     .btn-box button:nth-child(1).active ~ .active-bar{
-        left: 20px;
+        left: 0;
         opacity: 1;
     }
     
     .btn-box button:nth-child(2).active ~ .active-bar{
-        left: 28%;
+        left: 27.5%;
         opacity: 1;
     }
     
     .btn-box button:nth-child(3).active ~ .active-bar{
-        left: 50%;
+        left: 52.5%;
         opacity: 1;
     }
     
     .btn-box button:nth-child(4).active ~ .active-bar{
-        left: 72%;
+        left: 80%;
         opacity: 1;
     }
 
     .active-bar{
-        position: absolute;
-        width: 18%;
-        border-bottom: 3px solid #000;
-        transition: 0.3s;
-        opacity: 0;
+        bottom: 0;
+        width: 20%;
     }
 
     .content-img{
-        width: 100vw;
+        width: 360px;
+        height: 593px;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
     }
     
     .device{
-        width: 100vw;
-        height: auto;
+        width: 360px;
+        height: 593px;
 
+    }
+
+    .device-img{
+        width: 360px;
+        height: 593px;
     }
     
     .screenshot{
-        position: absolute;
-        width: 300px;
-        height: 650px;
-        top: 104px;
-        right: 110px;
-        overflow: hidden;
+        width: 204px;
+        height: 442px;
+        top: 72px;
+        right: 74px;
+        
     }
     
     .slide{
         position: absolute;
         transform: translateX(300px);
-        width: 300px;
-        height: 650px;
+        width: 204px;
+        height: 442px;
         transition: all 0.3s ease;
     }
     
