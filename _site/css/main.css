@@ -406,7 +406,7 @@ button:last-child{
 
 }
 
-@media screen and (max-width: 1028px) {
+@media screen and (max-width: 768px) {
 
     p{
         font-size: 1em;
