@@ -516,7 +516,7 @@ button:last-child{
 
     .content-text{
         width: 100vw;
-        height: 150px;
+        height: 100px;
         text-align: center;
         font-size: 1em;
         display: flex;
