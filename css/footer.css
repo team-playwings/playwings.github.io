@@ -1,6 +1,15 @@
 #footer {
     background-color: #ffffff;
-    padding: 64px 0;
+    bottom: 0;
+    position: fixed;
+    z-index: -999;
+    width: 100vw;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container{
     display: flex;
     justify-content: center;
 }

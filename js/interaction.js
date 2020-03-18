@@ -33,13 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Intro Parallax
     let timeline = new TimelineMax();
     timeline
-    .to('#bg-5', 5, {y: -700})
-    .to('#bg-4', 5, {y: -500}, '-=5')
-    .to('#bg-3', 5, {y: -400}, '-=5')
-    .to('#bg-2', 5, {y: -300}, '-=5')
-    .to('#bg-1', 5, {y: -200}, '-=5')
-    .to('#section', 5, {top: '0%'}, '-=5')
-    .to('#main-contents', 5, {y: -700}, '-=5')
+    .to('#bg-5', 6, {y: -700})
+    .to('#bg-4', 6, {y: -500}, '-=6')
+    .to('#bg-3', 6, {y: -400}, '-=6')
+    .to('#bg-2', 6, {y: -300}, '-=6')
+    .to('#bg-1', 6, {y: -200}, '-=6')
+    //.to('#section', 6, {top: '0%'}, '-=6')
+    .to('#main-contents', 6, {y: -700}, '-=6')
 
     new ScrollMagic.Scene({
         triggerElement: 'main',
@@ -65,10 +65,41 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.content-img').each(function(){
         new ScrollMagic.Scene({
             triggerElement: this,
-            triggerHook: 1
+            triggerHook: 0.4
         })
         .setClassToggle(this, 'fade-in')
         .addIndicators()
         .addTo(controller);
     });
+
+     // Title Fade In Up
+     $(".section-wrapper").each(function(i){
+        let target1 = $(this).find("h1");
+        let target2 = $(this).find("p");
+        var tl = new TimelineMax();
+        tl.fromTo(target1, 1, { opacity: 0, y: 50 }, {opacity: 1, y: 0})
+        tl.fromTo(target2, 1, { opacity: 0, y: 50 }, {opacity: 1, y: 0}, '-=0.5')
+      
+        new ScrollMagic.Scene({
+          triggerElement: this,  
+          triggerHook: 0.5
+        })
+          .setTween(tl)
+          .addTo(controller)
+          .addIndicators({
+            colorTrigger: "red",
+            colorStart: "red",
+            colorEnd: "red",
+            indent: 40
+          })
+      });
+      
+      // Footer
+      new ScrollMagic.Scene({
+          triggerElement: '.footer-trigger',
+          triggerHook: 1
+      })
+      .setTween('#section', 0.5, {y: -250})
+      .addTo(controller)
+      .addIndicators()
 })
