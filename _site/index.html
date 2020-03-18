@@ -63,87 +63,93 @@
 </header>
 
   <main id="intro">
-    <div id="main-wrapper" data-stellar-background-ratio="0.3">
+    <div id="main-mouse">
+        <svg class="icon-mouse" xmlns="http://wwww.w3.org/2000/svg" width="32" height="42" viewBox="0 0 24 37">
+            <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
+                <path d="M19 10a7 7 0 0 0-14 0v13.125a7 7 0 0 0 14 0V10z"></path>
+                <path class="mouse-wheel" d="M12 8.938v5.5"></path>
+            </g>
+        </svg>
+    </div>
+    <div id="main-wrapper">
         <div id="main-contents">
             <img id="main-title-1" class="main-title" src="images/title-center.svg">
             <div class="button">
-                <button type="button" onclick="window.open('https://apps.apple.com/kr/app/id1050019372')"
-                                class="button1 button-web"><i class="ri-apple-fill"></i>App Store
-                        </button>
-                        <button type="button"
-                                onclick="window.open('https://play.google.com/store/apps/details?id=com.fridaynoons.playwings')" class="button-web">
-                            <i class="ri-google-play-fill"></i>Google Play
-                        </button>
-                        <button type="button"
-                        onclick="window.open()" class="button-app">
-                            앱 다운로드
-                        </button>
+                <button type="button" onclick="window.open('https://apps.apple.com/kr/app/id1050019372')" class="button1 button-web"><i class="ri-apple-fill"></i>App Store</button>
+                <button type="button"
+                        onclick="window.open('https://play.google.com/store/apps/details?id=com.fridaynoons.playwings')" class="button-web"><i class="ri-google-play-fill"></i>Google Play</button>
+                <button type="button"
+                onclick="window.open()" class="button-app">
+                    앱 다운로드</button>
             </div>
         </div>
-        <div id="main-mouse">
-            <svg class="icon-mouse" xmlns="http://wwww.w3.org/2000/svg" width="32" height="42" viewBox="0 0 24 37">
-                <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
-                    <path d="M19 10a7 7 0 0 0-14 0v13.125a7 7 0 0 0 14 0V10z"></path>
-                    <path class="mouse-wheel" d="M12 8.938v5.5"></path>
-                </g>
-            </svg>
+        <div class="main-cover">
+            <div class="img-wrapper" id="bg-1">
+                <img src="images/bg_5.jpg">
+            </div>
+            <div class="img-wrapper" id="bg-2">
+                <img src="images/bg_4.png">
+            </div>
+            <div class="img-wrapper" id="bg-3">
+                <img src="images/bg_3.png">
+            </div>
+            <div class="img-wrapper" id="bg-4">
+                <img src="images/bg_2.png">
+            </div>
+            <div class="img-wrapper" id="bg-5">
+                <img src="images/bg_1.png">
+            </div>
+            <div class="overlay img-wrapper"></div>
         </div>
     </div>
 </main>
 
-<section id="section-1" class="row">
-    <div class="section-wrapper">
-        <div class="section-contents content--layout">
-            <div class="content-title">
-                <div class="title-contents">
-                    <img class="title-left" src="images/title_content1.svg" alt="">
-                    <img class="title-center" src="images/title_content1-s.svg" alt="">
-                </div>
-                <p class="title-desc">항공권 가격은 매일매일 변합니다.
-                    중요한 건 <span class="text-red">언제 가장 저렴한가</span> 입니다.<br class="br">
-                    이제 플레이윙즈로 알림을 받으세요.
-                    특가 항공권 정보를 실시간으로 보내드립니다.</p>
-            </div>
-            <div class="content-desc">
-                <div class="btn-box">
-                    <button id="btn-1" onclick="openSlide1()" class="active tab-btn">스크린샷 1</button>
-                    <button id="btn-2" onclick="openSlide2()" class="tab-btn">스크린샷 2</button>
-                    <button id="btn-3" onclick="openSlide3()" class="tab-btn">스크린샷 3</button>
-                    <button id="btn-4" onclick="openSlide4()" class="tab-btn">스크린샷 4</button>
-                    <div class="active-bar"></div>
-                </div>
-                <div class="content-text">
-                    <div id="text-1" class="text">
-                        내가 원하는 특가정보만 보고 싶으시죠?<br>
-                        출발지 / 여행지 / 선호항공사 / 여행테마의 선호정보를<br>
-                        설정하면 내가 원하는 특가정보만 받을 수 있어요!
-                    </div>
-                    <div id="text-2" class="text">
-                        플레이윙즈 사이트를 만들자<br>
-                        야호야호
-                    </div>
-                    <div id="text-3" class="text">
-                        코딩은 즐거워<br>
-                        새로워
-                    </div>
-                    <div id="text-4" class="text">
-                        아무노래나 일단 틀어<br>
-                        아무거나 신나는 걸로<br>
-                        둠칫 두둠칫
-                    </div>
-                </div>
-            </div>
-            <div class="content-img">
-                <div class="device">
-                    <img class="device-img" src="images/device.png" alt="">
-                </div>
-                <div class="screenshot">
-                    <img class="slide" id="slide-1" alt="" src="images/slide1.jpg">
-                    <img class="slide" id="slide-2" src="images/slide2.jpg">
-                    <img class="slide" id="slide-3" src="images/slide3.jpg">
-                    <img class="slide" id="slide-4" src="images/slide4.jpg">
-                </div>
-            </div>
+<section id="section" class="row">
+    <div class="section-container">
+        <div class="content-text">
+            <h1>선택한 여행지 정보만<br>플레이하다</h1>
+            <p class="desc">가고 싶은 곳은 정했는데 모든 정보를 받고 있나요?<br>
+                플레이윙즈는 선호하는 지역의 맞춤 정보만을 제공합니다.  
+            </p>
+        </div>
+        <div class="content-img">
+            <img src="images/slide-1.png" class="slide">
+        </div>
+    </div>
+    <div class="section-container">
+        <div class="content-img">
+            <img src="images/slide-2.png" class="slide">
+        </div>
+        <div class="content-text">
+            <h1>실시간 특가 알림을<br>플레이하다</h1>
+            <p class="desc">이미 판매 완료된 특가에 허탈한 적 있나요?<br>
+                플레이윙즈는 지금 오픈한 특가 항공권을<br>
+                실시간 알림으로 알려드립니다.                   
+            </p>
+        </div>
+    </div>
+    <div class="section-container">
+        <div class="content-text">
+            <h1>키워드 하나로<br>모든 항공편을 플레이하다</h1>
+            <p class="desc">너무 많은 항공사와 비행편에 놀라셨나요?<br>
+                플레이윙즈에선 키워드 하나만으로<br>
+                간편하게 모든 항공편 확인이 가능합니다.                 
+            </p>
+        </div>
+        <div class="content-img">
+            <img src="images/slide-3.png" class="slide">
+        </div>
+    </div>
+    <div class="section-container">
+        <div class="content-img">
+            <img src="images/slide-4.png" class="slide">
+        </div>
+        <div class="content-text">
+            <h1>추천 콘텐츠로<br>여행을 미리 플레이하다</h1>
+            <p class="desc">마구 쏟아지는 정보에 혼란스러웠나요?<br>
+                플레이윙즈에서는 전문 여행 에디터가<br>
+                직접 제작한 콘텐츠만 알맞게 추천합니다.                 
+            </p>
         </div>
     </div>
 </section>
@@ -161,72 +167,7 @@
 <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
 <script src="js/jquery.stellar.min.js"></script>
 <script src="js/interaction.js"></script>
-<script>
 
-    var text1 = document.getElementById("text-1");
-    var text2 = document.getElementById("text-2");
-    var text3 = document.getElementById("text-3");
-    var text4 = document.getElementById("text-4");
-    var slide1 = document.getElementById("slide-1");
-    var slide2 = document.getElementById("slide-2");
-    var slide3 = document.getElementById("slide-3");
-    var slide4 = document.getElementById("slide-4");
-    var btn1 = document.getElementById("btn-1");
-    var btn2 = document.getElementById("btn-2");
-    var btn3 = document.getElementById("btn-3");
-    var btn4 = document.getElementById("btn-4");
-    var btn = document.getElementsByClassName("tab-btn");
-
-    function openSlide1(){
-        text1.style.opacity = "1";
-        slide1.style.transform = "translateX(0px)";
-        text2.style.opacity = "0";
-        slide2.style.transform = "translateX(300px)";
-        text3.style.opacity = "0";
-        slide3.style.transform = "translateX(300px)";
-        text4.style.opacity = "0";
-        slide4.style.transform = "translateX(300px)";
-    }
-
-    function openSlide2(){
-        text1.style.opacity = "0";
-        slide1.style.transform = "translateX(0px)";
-        text2.style.opacity = "1";
-        slide2.style.transform = "translateX(0px)";
-        text3.style.opacity = "0";
-        slide3.style.transform = "translateX(300px)";
-        text4.style.opacity = "0";
-        slide4.style.transform = "translateX(300px)";
-    }
-
-    function openSlide3(){
-        text1.style.opacity = "0";
-        slide1.style.transform = "translateX(0px)";
-        text2.style.opacity = "0";
-        slide2.style.transform = "translateX(0px)";
-        text3.style.opacity = "1";
-        slide3.style.transform = "translateX(0px)";
-        text4.style.opacity = "0";
-        slide4.style.transform = "translateX(300px)";
-    }
-
-    function openSlide4(){
-        text1.style.opacity = "0";
-        slide1.style.transform = "translateX(0px)";
-        text2.style.opacity = "0";
-        slide2.style.transform = "translateX(0px)";
-        text3.style.opacity = "0";
-        slide3.style.transform = "translateX(0px)";
-        text4.style.opacity = "1";
-        slide4.style.transform = "translateX(0px)";
-    }
-
-    $(btn).on('click', function(){
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-    })
-
-</script>
   <!-- Footer -->
 <footer id="footer">
   <div class="inner">
