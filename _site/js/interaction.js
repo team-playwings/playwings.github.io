@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
         .setTween(TweenMax.to('#header', 0.2, {backgroundColor: '#fff'}))
         .setClassToggle('.bi-b', 'bi-bb')
-        .addIndicators()
         .addTo(controller);
 
 
@@ -68,38 +67,62 @@ document.addEventListener('DOMContentLoaded', () => {
             triggerHook: 0.4
         })
         .setClassToggle(this, 'fade-in')
-        .addIndicators()
         .addTo(controller);
     });
 
-     // Title Fade In Up
-     $(".section-wrapper").each(function(i){
+    // Title Fade In Up
+    $(".section-wrapper").each(function(i){
         let target1 = $(this).find("h1");
         let target2 = $(this).find("p");
-        var tl = new TimelineMax();
-        tl.fromTo(target1, 1, { opacity: 0, y: 50 }, {opacity: 1, y: 0})
-        tl.fromTo(target2, 1, { opacity: 0, y: 50 }, {opacity: 1, y: 0}, '-=0.5')
-      
+        var titleTl1 = new TimelineMax();
+            titleTl1.fromTo(target1, 1, { opacity: 0, y: 50 }, {opacity: 1, y: 0})
+            titleTl1.fromTo(target2, 1, { opacity: 0, y: 50 }, {opacity: 1, y: 0}, '-=0.8')
+    
         new ScrollMagic.Scene({
-          triggerElement: this,  
-          triggerHook: 0.5
+            triggerElement: this,  
+            triggerHook: 0.5
         })
-          .setTween(tl)
-          .addTo(controller)
-          .addIndicators({
-            colorTrigger: "red",
-            colorStart: "red",
-            colorEnd: "red",
-            indent: 40
-          })
-      });
-      
-      // Footer
-      new ScrollMagic.Scene({
-          triggerElement: '.footer-trigger',
-          triggerHook: 1
-      })
-      .setTween('#section', 0.5, {y: -250})
-      .addTo(controller)
-      .addIndicators()
+            .setTween(titleTl1)
+            .addTo(controller);
+    });
+
+    // Device Fade In Up
+    let device = new TimelineMax();
+    device
+        .fromTo('.ds-1, .ds-3', 1, {y: 80}, {y: 0})
+        .fromTo('.ds-2, .ds-5', 1, {y: 100}, {y: 0}, '-=1')
+        .fromTo('.ds-4, .ds-6', 1, {y: 120}, {y: 0}, '-=1')
+
+    new ScrollMagic.Scene({
+        triggerElement: '.section-wrapper-2',
+        triggerHook: 0.5
+    })
+        .setTween(device)
+        .addTo(controller);
+
+    // Title Fade In Up 2
+    let titleCenter = $('.content-text-2').find('h1');
+    let descCenter = $('.content-text-2').find('p');
+    var titleTl2 = new TimelineMax();
+        titleTl2.fromTo(titleCenter, 1, { opacity: 0, y: 50 }, {opacity: 1, y: 0})
+        titleTl2.fromTo(descCenter, 1, { opacity: 0, y: 50 }, {opacity: 1, y: 0}, '-=0.8')
+
+    new ScrollMagic.Scene({
+        triggerElement: '.section-wrapper-2',
+        triggerHook: 0.4
+    })
+        .setTween(titleTl2)
+        .addTo(controller);
+
+    // Footer
+    new ScrollMagic.Scene({
+        triggerElement: '.footer-trigger',
+        triggerHook: 1
+    })
+        .setTween('#section', 0.5, {y: -250})
+        .addIndicators({
+            colorTrigger: 'rgba(0,0,0,0)',
+            colorStart: 'rgba(0,0,0,0)'
+        })
+        .addTo(controller);
 })
