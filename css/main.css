@@ -145,6 +145,7 @@ p {
 .img-wrapper img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 /* Mouse wheeling */
@@ -248,6 +249,7 @@ button:last-child{
     flex-direction: row;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
 .half-section{
@@ -330,10 +332,10 @@ h1{
 }
 
 .content-img-2{
-    position: relative;
-    width: 1920px;
+    position: absolute;
+    width: 100%;
     height: 100%;
-    overflow: hidden;
+    
 }
 
 .content-text-2{
@@ -350,36 +352,36 @@ h1{
     width: 720px;
     height: auto;  
     position: absolute;
+    bottom: 0%;
+    left: 50%;
 }
 
 .ds-1{
-    left: 700px;
-    bottom: 0;
+    transform: translate(-300px, -200px);
 }
 
 .ds-2{
-    left: 0;
-    bottom: -10%;
+    transform: translate(-960px, -50px);
 }
 
 .ds-3{
-    left: 192px;
-    bottom: -40%;
+    transform: translate(-740px, 150px);
 }
 
 .ds-4{
-    right: -300px;
-    top: 10%;
+    transform: translate(-50px, 0px);
 }
 
 .ds-5{
-    right: -96px;
-    bottom: -20%;
+    transform: translate(-1280px, -200px);
 }
 
 .ds-6{
-    left: -400px;
-    top: 40%;
+    transform: translate(420px, -320px);
+}
+
+.ds-7{
+    transform: translate(200px, 200px);
 }
 
 .fade-in{
@@ -387,15 +389,27 @@ h1{
     opacity: 1;
 }
 
-
 .opacity60 {
     color: rgba(0, 0, 0, .6);
     word-break: keep-all;
 }
 
+@media screen and (max-width: 1920px) {
+
+    .content-img-2{
+        top: 20%;
+    }
+
+}
 
 
+@media screen and (max-width: 1600px) {
 
+    .content-img-2{
+        top: 20%;
+    }
+
+}
 
 @media screen and (max-width: 1440px) {
 
@@ -415,73 +429,24 @@ h1{
         height: 66px;
     }
 
-    .content-img-2{
-        width: 1440px;
-    }
-    
-    .ds-4{
-        right: -500px;
-        top: 10%;
-    }
-    
-    .ds-5{
-        right: -400px;
-        bottom: -20%;
-    }
-    
 }
 
 @media screen and (max-width: 1366px) {
+
     .content-text-2{
-        top: 16%;
+        top: 15%;
     }
 
     .content-img-2{
-        max-width: 1366px;
-        width: 100%;
+        top: 32%;
     }
 
-    .ds-4{
-        right: -500px;
-        top: -10%;
-    }
-
-    .ds-6{
-        left: -500px;
-        top: 35%;
-    }
 }
 
 @media screen and (max-width: 1280px) {
 
     .content-img-2{
-        max-width: 1280px;
-        width: 100%;
-    }
-
-    .ds-1{
-        left: 600px;
-        bottom: 0;
-    }
-    
-    .ds-2{
-        left: -100px;
-        bottom: -10%;
-    }
-    
-    .ds-3{
-        left: 92px;
-        bottom: -40%;
-    }
-
-    .ds-4{
-        right: -500px;
-        top: -10%;
-    }
-
-    .ds-6{
-        left: -500px;
-        top: 35%;
+        top: 24%;
     }
 
 }
@@ -490,10 +455,12 @@ h1{
 
     h1{
         text-align: center;
+        font-size: 2em;
     }
 
     p{
         text-align: center;
+        word-break: keep-all;
     }
     
     #header-container{
@@ -508,30 +475,93 @@ h1{
         width: 100vw;
         flex-direction: column;
         overflow: hidden;
+        padding: 48px 24px;
     }
 
     .section-reverse{
         width: 100vw;
         flex-direction: column;
         overflow: hidden;
+        padding: 48px 24px;
+    }
+
+    #main-contents{
+        align-items: center;
+    }
+
+    .content-img{
+        justify-content: center;
+    }
+
+    .slide{
+        width: 320px;
+        height: auto;
+    }
+
+    .main-title{
+        width: 50vw;
+        height: auto;
+    }
+
+    .content-text-2{
+        top: 48px;
+        padding: 0 24px;
+    }
+
+    .button-app{
+        display: block;
+    }
+
+    .button-web{
+        display: none;
+    }
+
+    .device-slide{
+        width: 600px;
     }
 
     .content-img-2{
-        max-width: 1024px;
-        width: 100%;
+        top: 24%;
+        left: -20%;
     }
 
+
+    .ds-2{
+        transform: translate(-800px, -50px);
+    }
+    
+    .ds-3{
+        transform: translate(-70px, -40px);
+    }
+    
     .ds-4{
-        display: none;
+        transform: translate(-50px, 200px);
     }
-
+    
     .ds-5{
+        transform: translate(-840px, -290px);
+    }
+    
+    .ds-6{
+        transform: translate(230px, -370px);
+    }
+    
+    .ds-7{
         display: none;
     }
 
-    .ds-6{
-        left: -600px;
-        top: 35%;
+    .half-section{
+        height: 100vh;
+    }
+    
+    .half-container{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .half-container .button{
+        margin-top: 64px;
     }
 
 

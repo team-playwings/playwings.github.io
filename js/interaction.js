@@ -86,19 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .addTo(controller);
     });
 
-    // Device Fade In Up
-    let device = new TimelineMax();
-    device
-        .fromTo('.ds-1, .ds-3', 1, {y: 80}, {y: 0})
-        .fromTo('.ds-2, .ds-5', 1, {y: 100}, {y: 0}, '-=1')
-        .fromTo('.ds-4, .ds-6', 1, {y: 120}, {y: 0}, '-=1')
-
-    new ScrollMagic.Scene({
-        triggerElement: '.section-wrapper-2',
-        triggerHook: 0.5
-    })
-        .setTween(device)
-        .addTo(controller);
+    
 
     // Title Fade In Up 2
     let titleCenter = $('.content-text-2').find('h1');
@@ -119,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         triggerElement: '.footer-trigger',
         triggerHook: 1
     })
-        .setTween('#section', 0.5, {y: -250})
+        .setTween('#section', 0.5, {y: -300})
         .addIndicators({
             colorTrigger: 'rgba(0,0,0,0)',
             colorStart: 'rgba(0,0,0,0)'

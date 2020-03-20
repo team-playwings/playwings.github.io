@@ -4,7 +4,7 @@
     position: fixed;
     z-index: -999;
     width: 100vw;
-    height: 250px;
+    height: 300px;
     display: flex;
     justify-content: center;
 }
@@ -16,6 +16,7 @@
 
 .inner {
     width: 1028px;
+    height: 300px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -64,15 +65,11 @@
 }
 
 
-@media screen and (max-width: 736px) {
-    #footer {
-        background-color: #ffffff;
-        position: relative;
-    }
+@media screen and (max-width: 1024px) {
 
     .inner {
-        width: 100vw;
-        padding: 0 24px;
+        width: 100%;
+        padding: 24px;
         flex-direction: column-reverse;
         transform: scale3d(1, 1, 1);
     }
@@ -104,6 +101,9 @@
     .copy-menu{
         width: 100%;
         flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     .copy-menu li{
