@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         triggerElement: '.footer-trigger',
         triggerHook: 1
     })
-        .setTween('#section', 0.8, {y: -400})
+        .setTween('#section', 0.6, {y: -400})
         .addIndicators({
             colorTrigger: 'rgba(0,0,0,0)',
             colorStart: 'rgba(0,0,0,0)'
