@@ -64,9 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.content-img').each(function(){
         new ScrollMagic.Scene({
             triggerElement: this,
-            triggerHook: 0.4
+            triggerHook: 0.8
         })
         .setClassToggle(this, 'fade-in')
+        .addIndicators()
         .addTo(controller);
     });
 
@@ -107,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         triggerElement: '.footer-trigger',
         triggerHook: 1
     })
-        .setTween('#section', 0.6, {y: -400})
+        .setTween('#section', 0.6, {y: -350})
         .addIndicators({
             colorTrigger: 'rgba(0,0,0,0)',
             colorStart: 'rgba(0,0,0,0)'

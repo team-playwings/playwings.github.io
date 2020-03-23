@@ -4,7 +4,7 @@
     position: fixed;
     z-index: -999;
     width: 100vw;
-    height: 400px;
+    height: 350px;
     display: flex;
     justify-content: center;
 }
@@ -16,7 +16,7 @@
 
 .inner {
     width: 1028px;
-    height: 400px;
+    height: 350px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -77,12 +77,12 @@
 
     .icons {
         margin-right: 0;
-        margin-bottom: 32px;
+        margin-bottom: 16px;
 
     }
 
     .icon:first-child {
-        margin-right: 32px;
+        margin-right: 24px;
     }
 
     .copyright {
@@ -102,7 +102,7 @@
     .copy-menu{
         width: 100%;
         padding: 0 24px;
-        margin-bottom: 32px;
+        margin-bottom: 16px;
         flex-wrap: wrap;
         display: flex;
         justify-content: center;
