@@ -102,24 +102,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .setTween(titleTl2)
         .addTo(controller);
 
-    // Footer-web
+    // Footer
     new ScrollMagic.Scene({
-        triggerElement: '.footer-trigger-web',
+        triggerElement: '.footer-trigger',
         triggerHook: 1
     })
-        .setTween('#section', 0.5, {y: -300})
-        .addIndicators({
-            colorTrigger: 'rgba(0,0,0,0)',
-            colorStart: 'rgba(0,0,0,0)'
-        })
-        .addTo(controller);
-
-    // Footer-app
-    new ScrollMagic.Scene({
-        triggerElement: '.footer-trigger-app',
-        triggerHook: 1
-    })
-        .setTween('#section', 0.5, {y: -400})
+        .setTween('#section', 0.8, {y: -400})
         .addIndicators({
             colorTrigger: 'rgba(0,0,0,0)',
             colorStart: 'rgba(0,0,0,0)'

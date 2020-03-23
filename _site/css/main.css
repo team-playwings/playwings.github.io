@@ -456,6 +456,10 @@ h1{
 
 @media screen and (max-width: 1024px) {
 
+    .footer-trigger-app{
+        display: block;
+    }
+
     h1{
         text-align: center;
         font-size: 2em;
