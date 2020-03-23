@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
             triggerHook: 0.8
         })
         .setClassToggle(this, 'fade-in')
-        .addIndicators()
         .addTo(controller);
     });
 
