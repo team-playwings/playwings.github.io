@@ -76,7 +76,7 @@
 
     .icons {
         margin-right: 0;
-        margin-bottom: 24px;
+        margin-bottom: 0;
 
     }
 
@@ -108,10 +108,6 @@
     
     .copy-menu li{
         padding-right: 32px;
-    }
-    
-    .copy-menu li:last-child{
-        font-weight: 600;
     }
     
     .copy-info{
