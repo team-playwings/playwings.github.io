@@ -393,6 +393,9 @@ h1{
     color: rgba(0, 0, 0, .6);
     word-break: keep-all;
 }
+.footer-trigger-app{
+    display: none;
+}
 
 @media screen and (max-width: 1920px) {
 
