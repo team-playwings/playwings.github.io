@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>playwings</title>
-    <description>언제나 가볍게 지구산책</description>
+    <description>찾기 힘든 항공권 특가정보, 한 눈에 확인하세요! 얼리버드 프로모션 예매, 땡처리 비행기표 예약 등</description>
     <link>http://localhost:4000http://localhost:4000/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 25 Mar 2020 17:49:58 +0900</pubDate>
-    <lastBuildDate>Wed, 25 Mar 2020 17:49:58 +0900</lastBuildDate>
+    <pubDate>Wed, 25 Mar 2020 18:00:38 +0900</pubDate>
+    <lastBuildDate>Wed, 25 Mar 2020 18:00:38 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
   </channel>
