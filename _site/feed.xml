@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>playwings</title>
-    <description>새로운 시선으로 여행을 바라보는 사람들</description>
+    <description>언제나 가볍게 지구산책</description>
     <link>http://localhost:4000http://localhost:4000/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 24 Mar 2020 11:06:36 +0900</pubDate>
-    <lastBuildDate>Tue, 24 Mar 2020 11:06:36 +0900</lastBuildDate>
+    <pubDate>Wed, 25 Mar 2020 17:49:58 +0900</pubDate>
+    <lastBuildDate>Wed, 25 Mar 2020 17:49:58 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
   </channel>
