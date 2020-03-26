@@ -157,6 +157,12 @@ p {
     z-index: 1;
 }
 
+.icon-mouse{
+    width: 32px;
+    height: 42px;
+    viewbox
+}
+
 .icon-mouse path{
     transition: all 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
