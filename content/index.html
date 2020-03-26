@@ -22,7 +22,7 @@
                 .then(response => response.json())
                 .then(function (entry) {
                     let content = entry.fields.content;
-                    content = content.replace(/\/\//g, 'https://');
+                    //content = content.replace(/\/\//g, 'https://');
                     $('#content').html(marked(content));
                 });
         }
