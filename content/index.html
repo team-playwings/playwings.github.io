@@ -5,10 +5,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.5.1/marked.min.js"></script>
     <script>
         function getParameters() {
-            var parameters = {};
-            var vars = window.location.search.substring(1).split('&');
-            var pair;
-            for (var i = 0; i < vars.length; i++) {
+            const parameters = {};
+            const vars = window.location.search.substring(1).split('&');
+            let pair;
+            for (let i = 0; i < vars.length; i++) {
                 pair = vars[i].split('=');
                 if (typeof parameters[pair[0]] === 'undefined') parameters[pair[0]] = pair[1];
                 else if (typeof parameters[pair[0]] === 'string') parameters[pair[0]] = [parameters[pair[0]], pair[1]];
@@ -18,12 +18,16 @@
         }
 
         function getEntry() {
-            fetch('https://preview.contentful.com/spaces/pcs8f5kjnl9o/entries/' + getParameters().id + '?access_token=vtujREJfdVrIpHkPL7YXMEeDdMJVLq4M3PZOz_ggrEo')
+            const parameters = getParameters();
+            const space = parameters.space || 'pcs8f5kjnl9o';
+            const token = parameters.token || 'vtujREJfdVrIpHkPL7YXMEeDdMJVLq4M3PZOz_ggrEo';
+            const url = 'https://preview.contentful.com/spaces/' + space + '/entries/' + parameters.id + '?access_token=' + token;
+            console.log('---')
+            console.log(url);
+            fetch(url)
                 .then(response => response.json())
                 .then(function (entry) {
-                    let content = entry.fields.content;
-                    //content = content.replace(/\/\//g, 'https://');
-                    $('#content').html(marked(content));
+                    $('#content').html(marked(entry.fields.content));
                 });
         }
         getEntry();
