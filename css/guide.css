@@ -1,0 +1,54 @@
+#guide{
+    width: 100vw;
+    height: auto;
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 72px; 
+}
+
+.content-wrapper{
+    width: 100vw;
+    height: auto;
+}
+
+.content{
+    width: calc( 100% - 240px);
+    height: 100vh;
+}
+
+#guide-1{
+    background-color: seagreen;
+}
+#guide-2{
+    background-color: rosybrown;
+}
+#guide-3{
+    background-color: silver;
+}
+#guide-4{
+    background-color: thistle;
+}
+
+.gnb{
+    background-color: sandybrown;
+    width: 240px;
+    height: 100vh;
+    list-style: none;
+    position: fixed;
+    right: 0;
+    top: 72px;
+}
+
+.gnb li{
+    padding: 8px 0;
+}
+
+.menu-on{
+    color: tomato;
+}
+
+.fixed{
+    position: fixed;
+}

@@ -113,4 +113,15 @@ document.addEventListener('DOMContentLoaded', () => {
             colorStart: 'rgba(0,0,0,0)'
         })
         .addTo(controller);
+
+    $(document).ready(function(){
+        $('.gnb li a').click(function(e){
+            $('.gnb li').removeClass('menu-on'); 
+            $(this).parent('li').addClass('menu-on');
+                e.preventDefault(); 
+            $('html,body').animate({scrollTop:$(this.hash).offset().top - 72}, 500);
+            });
+        })
+
+
 })
