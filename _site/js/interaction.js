@@ -113,15 +113,31 @@ document.addEventListener('DOMContentLoaded', () => {
             colorStart: 'rgba(0,0,0,0)'
         })
         .addTo(controller);
-
-    $(document).ready(function(){
-        $('.gnb li a').click(function(e){
-            $('.gnb li').removeClass('menu-on'); 
-            $(this).parent('li').addClass('menu-on');
-                e.preventDefault(); 
-            $('html,body').animate({scrollTop:$(this.hash).offset().top - 72}, 500);
-            });
-        })
-
+    
+    var speed = 700;
+	function scrolling(obj){
+		if (!obj){
+			$('html, body').animate({scrollTop:0},speed);
+		}else{
+			var posTop = $(obj).offset().top -144;
+			$('html, body').animate({scrollTop:posTop}, speed )
+		}
+	};
+	
+	$("#nav ul li a").click(function(){	// 네비게이션 클릭시
+		var direction = $(this).attr("href");	// direction = 클릭한 요소의 href 속성
+		scrolling( direction );	// direction 을 인자로 함수 실행
+		return false;	// 본래 이벤트 방지 
+	});
+   
+    $(window).on('scroll', function() {
+        $('.target').each(function() {
+            if($(window).scrollTop() >= $(this).offset().top) {
+                var id = $(this).attr('id');
+                $('#nav nav a').removeClass('active');
+                $('#nav nav a[href=#'+ id +']').addClass('active');
+            }
+        });
+    });
 
 })

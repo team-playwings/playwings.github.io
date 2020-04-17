@@ -1,54 +1,57 @@
-#guide{
-    width: 100vw;
-    height: auto;
-    background-color: wheat;
-    display: flex;
+
+#nav{
+	position:fixed; 
+	top:72px;
+	left:0px;
+	height:72px;
+	width:100%; 
+	background:#ffffff;	  
+	text-align:center;
+    font-size:16px;
+    z-index: 10;
+}
+#nav ul {
+    list-style:none;
+    margin-top: 16px;
+    display: inline-flex;
     justify-content: center;
-    position: absolute;
-    top: 72px; 
+}		   
+
+#nav li {
+    margin-right:16px;
+    background-color: #f5f5f5;
+    padding: 8px 16px;
+    border-radius: 8px;
 }
 
-.content-wrapper{
-    width: 100vw;
-    height: auto;
+#nav li a {
+    text-decoration:none;
+    color:rgba(0,0,0,.87);
+}
+#nav li a:hover {color:#F63D58;}
+
+.contents{ 
+    width:1280px;
+    margin:0 auto;
+    margin-top: 144px;
 }
 
-.content{
-    width: calc( 100% - 240px);
-    height: 100vh;
+.article{
+    height: 1000px;
 }
 
 #guide-1{
-    background-color: seagreen;
+    background:salmon;
 }
 #guide-2{
-    background-color: rosybrown;
+    background:RoyalBlue;
 }
 #guide-3{
-    background-color: silver;
+    background:Gold;
 }
 #guide-4{
-    background-color: thistle;
+    background:rosybrown;
 }
-
-.gnb{
-    background-color: sandybrown;
-    width: 240px;
-    height: 100vh;
-    list-style: none;
-    position: fixed;
-    right: 0;
-    top: 72px;
-}
-
-.gnb li{
-    padding: 8px 0;
-}
-
-.menu-on{
-    color: tomato;
-}
-
-.fixed{
-    position: fixed;
+#guide-5{
+    background: silver;
 }
