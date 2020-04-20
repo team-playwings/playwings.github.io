@@ -53,10 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Logo
     new ScrollMagic.Scene({
         triggerElement: '#section',
-        triggerHook: 0.6
+        triggerHook: 0.3
     })
         .setTween(TweenMax.to('#header', 0.2, {backgroundColor: '#fff'}))
         .setClassToggle('.bi-b', 'bi-bb')
+        .addIndicators()
         .addTo(controller);
 
 
@@ -86,8 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .addTo(controller);
     });
 
-    
-
     // Title Fade In Up 2
     let titleCenter = $('.content-text-2').find('h1');
     let descCenter = $('.content-text-2').find('p');
@@ -107,37 +106,48 @@ document.addEventListener('DOMContentLoaded', () => {
         triggerElement: '.footer-trigger',
         triggerHook: 1
     })
-        .setTween('#section', 0.6, {y: -350})
+        .setTween('.row', 0.6, {y: -350}) //guide 에서도 작동하게 하고 싶을 경우 .row를 #section으로 바꿔주세요.
         .addIndicators({
             colorTrigger: 'rgba(0,0,0,0)',
             colorStart: 'rgba(0,0,0,0)'
         })
         .addTo(controller);
     
-    var speed = 700;
-	function scrolling(obj){
-		if (!obj){
-			$('html, body').animate({scrollTop:0},speed);
-		}else{
-			var posTop = $(obj).offset().top -144;
-			$('html, body').animate({scrollTop:posTop}, speed )
-		}
-	};
-	
-	$("#nav ul li a").click(function(){	// 네비게이션 클릭시
-		var direction = $(this).attr("href");	// direction = 클릭한 요소의 href 속성
-		scrolling( direction );	// direction 을 인자로 함수 실행
-		return false;	// 본래 이벤트 방지 
-	});
-   
-    $(window).on('scroll', function() {
-        $('.target').each(function() {
-            if($(window).scrollTop() >= $(this).offset().top) {
-                var id = $(this).attr('id');
-                $('#nav nav a').removeClass('active');
-                $('#nav nav a[href=#'+ id +']').addClass('active');
-            }
+    // Guide
+    new ScrollMagic.Scene({
+        triggerElement: '.lnb-wrapper',
+        triggerHook: 0.11,
+    })
+        .setClassToggle('.lnb-wrapper', 'fixed')
+        .addIndicators()
+        .addTo(controller);
+ 
+
+    // Smooth Scroll
+    $(function(){
+        var link = $('#section .lnb-wrapper .lnb a');
+        link.on('click',function(e){
+            var target = $($(this).attr('href')); 
+            $('html, body').animate({
+                scrollTop: target.offset().top -100
+            },600);      
+            $(this).addClass('active');
+            //e.preventDefault(); //URL에 ID없애기
         });
+        
+        $(window).on('scroll',function(){
+            findPosition();
+        });
+
+        function findPosition(){
+            $('section').each(function(){
+                if( ($(this).offset().top -100 - $(window).scrollTop() ) < 20){
+                    link.removeClass('active');
+                    $('#navbar').find('[data-scroll="'+ $(this).attr('id') +'"]').addClass('active');
+                }
+            });
+        }
+        findPosition();
     });
 
 })

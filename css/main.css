@@ -101,7 +101,7 @@ i {
 }
 
 #header-container {
-    width: 1028px;
+    width: 1080px;
     height: 72px;
     position: relative;
 }
@@ -254,7 +254,7 @@ i {
 }
 
 .half-container {
-    width: 1028px;
+    width:1080px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -266,7 +266,7 @@ i {
 }
 
 .section-container {
-    width: 1028px;
+    width: 1080px;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -274,7 +274,7 @@ i {
 }
 
 .section-reverse {
-    width: 1028px;
+    width: 1080px;
     height: 100vh;
     display: flex;
     flex-direction: row-reverse;
