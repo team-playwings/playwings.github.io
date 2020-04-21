@@ -22,8 +22,6 @@
             const space = parameters.space || 'pcs8f5kjnl9o';
             const token = parameters.token || 'vtujREJfdVrIpHkPL7YXMEeDdMJVLq4M3PZOz_ggrEo';
             const url = 'https://preview.contentful.com/spaces/' + space + '/entries/' + parameters.id + '?access_token=' + token;
-            console.log('---')
-            console.log(url);
             fetch(url)
                 .then(response => response.json())
                 .then(function (entry) {

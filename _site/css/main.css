@@ -254,7 +254,7 @@ i {
 }
 
 .half-container {
-    width:1080px;
+    width: 1080px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -380,10 +380,6 @@ i {
     word-break: keep-all;
 }
 
-.footer-trigger-app {
-    display: none;
-}
-
 @media screen and (max-width: 1920px) {
     .content-img-2 {
         top: 20%;
@@ -431,10 +427,6 @@ i {
 }
 
 @media screen and (max-width: 1024px) {
-    .footer-trigger-app {
-        display: block;
-    }
-
     h1 {
         text-align: center;
         font-size: 2em;

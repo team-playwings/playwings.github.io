@@ -1,4 +1,4 @@
-#footer{
+#footer {
     background-color: #ffffff;
     bottom: 0;
     position: fixed;
@@ -9,7 +9,7 @@
     justify-content: center;
 }
 
-.footer-container{
+.footer-container {
     display: flex;
     justify-content: center;
 }
@@ -43,23 +43,23 @@
     word-break: keep-all;
 }
 
-.copy-name{
+.copy-name {
     font-size: 16px;
     font-weight: 600;
 }
 
-.copy-menu{
+.copy-menu {
     list-style: none;
     display: inline-flex;
     padding-inline-start: 0;
     margin-bottom: 24px;
 }
 
-.copy-menu li{
+.copy-menu li {
     padding-right: 32px;
 }
 
-.copy-info{
+.copy-info {
     line-height: 1.5em;
     margin-block-start: 0;
     margin-block-end: 32px;
@@ -89,15 +89,15 @@
         font-size: 12px;
         word-break: keep-all;
     }
-    
-    .copy-name{
+
+    .copy-name {
         font-size: 16px;
         font-weight: 600;
         width: 100%;
         text-align: center;
     }
-    
-    .copy-menu{
+
+    .copy-menu {
         width: 100%;
         padding: 0 24px;
         margin-bottom: 16px;
@@ -106,12 +106,12 @@
         justify-content: center;
         align-items: center;
     }
-    
-    .copy-menu li{
+
+    .copy-menu li {
         padding-right: 24px;
     }
-    
-    .copy-info{
+
+    .copy-info {
         padding: 0 24px;
         line-height: 1.5em;
         margin-block-start: 0;
