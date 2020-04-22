@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
         .setTween(TweenMax.to('#header', 0.2, {backgroundColor: 'rgba(255, 255, 255, 1)'}))
         .setClassToggle('.bi-b', 'bi-bb')
-        .addIndicators()
         .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         triggerHook: 0.11,
     })
         .setClassToggle('.lnb-wrapper', 'fixed')
-        .addIndicators()
         .addTo(controller);
 
     const menus = $('#section .lnb-wrapper .lnb a');
