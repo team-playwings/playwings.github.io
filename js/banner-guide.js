@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         triggerElement: '#section',
         triggerHook: 0.3
     })
-        .setTween(TweenMax.to('#header', 0.2, {backgroundColor: 'rgba(255, 255, 255, 1)'}))
+        .setTween(TweenMax.to('#header', 0.2, {backgroundColor: 'rgba(255, 255, 255, 1)', borderBottom: '1px solid rgba(0,0,0,.12)'}))
         .setClassToggle('.bi-b', 'bi-bb')
         .addTo(controller);
 
