@@ -112,12 +112,13 @@ hr{
     align-items: center;
 }
 
+.download2{
+    margin-top: 0 !important;
+}
+
 .download i{
     margin-left: 8px;
 }
-
-
-
 
 .lnb-wrapper{
     width: 200px;
@@ -134,7 +135,6 @@ hr{
 .lnb li{
     padding-bottom: 16px;
     font-size: 16px;
-
 }
 
 .fixed{
@@ -147,18 +147,68 @@ hr{
     font-weight: bold;
 }
 
-#guide-1{
-
+.color-guide{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 64px 0 98px 0;
 }
-#guide-2{
 
+.color-chip{
+    margin: 0 12px;
 }
-#guide-3{
 
+.color-area{
+    width: 200px;
+    height: 120px;
+    border-radius: 8px 8px 0 0;
 }
-#guide-4{
 
+.dark{
+    background-color: #212121;
 }
+
+.primary{
+    background-color: #F63D58;
+}
+
+.white{
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,.12);
+}
+
+.color-content{
+    width: 200px;
+    height: 148px;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid rgba(0,0,0,.12);
+    background-color: #fff;
+    padding: 24px;
+}
+
+.color-content h3{
+    font-size: 18px;
+    margin-block-start: 0;
+    margin-block-end: 16px;
+}
+
+.color-content p{
+    margin-block-start: 0;
+    margin-block-end: 4px;
+    font-size: 16px;
+}
+
+.color-content p span{
+    color: rgba(0,0,0,.38);
+    font-weight: bold;
+    margin-right: 16px;
+}
+
+
+
+
+
 
 
 #footer {
