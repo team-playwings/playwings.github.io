@@ -6,6 +6,11 @@ table a {
     color: #F63D58;
 }
 
+table i{
+    position: relative;
+    top: 2px;
+}
+
 .intro-guide {
     width: 100vw;
     height: 500px;
