@@ -1,12 +1,12 @@
-body{
-    color: rgba(0,0,0,.87);
+body {
+    color: rgba(0, 0, 0, .87);
 }
 
-.spoqa{
-    color:  #F63D58;
+table a {
+    color: #F63D58;
 }
 
-.intro-guide{
+.intro-guide {
     width: 100vw;
     height: 500px;
     display: flex;
@@ -18,92 +18,93 @@ body{
     background-position: center;
 }
 
-.intro-title{
+.intro-title {
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.overlay-guide{
-    background-color: rgba(0,0,0,.6);
+.overlay-guide {
+    background-color: rgba(0, 0, 0, .6);
     width: 100%;
     height: 500px;
-    top:0;
+    top: 0;
     left: 0;
     position: absolute;
 }
 
-.wrap{
+.wrap {
     width: 1080px;
     margin: 0 auto;
-    margin-top: 48px;
     background-color: #fff;
 }
 
-.content{
-    padding-top: 56px;
+section {
+    padding-top: 80px;
 }
 
-.content-body{
+.content-body {
     width: 800px;
     margin-left: 280px;
 }
 
-.content img{
+section img {
     width: 100%;
     height: auto;
-    margin: 48px 0;
+    margin: 24px 0;
 
 }
 
-.content h1{
+section h1 {
     font-size: 40px;
 }
 
-.content h2{
-    font-size: 28px;
+section h2 {
+    font-size: 26px;
     margin: 64px 0 0 0;
 }
 
-.content table{
+section table {
     width: 100%;
     border-spacing: 0;
     margin-bottom: 64px;
 }
 
-.content table tr:nth-child(odd){
-    background-color: #f4f5f6;
+section table tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, .04);
 }
 
-.content table tr td{
+section table tr td {
     padding: 11px 24px;
     vertical-align: top;
 }
 
-.content table tr td:first-child{
+section table tr td:first-child {
     font-weight: bold;
 }
 
-hr{
-    border-color: rgba(0,0,0,.12);
+hr {
+    background: rgba(0, 0, 0, .12);
     margin-top: 16px;
+    height: 1px;
+    border: none;
 }
 
-.col-2{
+.col-2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.narrow{
-    margin: 48px 0 0 0 !important;
+.narrow {
+    margin: 40px 0 0 0 !important;
 }
 
-.download{
-    width: 184px;
+.download {
+    padding: 0 16px 0 24px;
     height: 48px;
-    border: 1px solid rgba(0,0,0,.12);
+    border: 1px solid rgba(0, 0, 0, .12);
     border-radius: 24px;
     font-size: 14px;
     margin-top: 64px;
@@ -112,42 +113,43 @@ hr{
     align-items: center;
 }
 
-.download2{
+.download2 {
     margin-top: 0 !important;
 }
 
-.download i{
+.download i {
     margin-left: 8px;
 }
 
-.lnb-wrapper{
+.lnb-wrapper {
+    margin-top: 80px;
     width: 200px;
     float: left;
 }
 
-.lnb{
+.lnb {
     padding: 0;
     list-style: none;
     margin-block-start: 0;
     margin-block-end: 0;
 }
 
-.lnb li{
+.lnb li {
     padding-bottom: 16px;
     font-size: 16px;
 }
 
-.fixed{
+.fixed {
     position: fixed;
-    top: 100px;
+    top: 20px;
 }
 
-.active{
+.active {
     color: #F63D58;
     font-weight: bold;
 }
 
-.color-guide{
+.color-guide {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -155,61 +157,56 @@ hr{
     margin: 64px 0 98px 0;
 }
 
-.color-chip{
+.color-chip {
     margin: 0 12px;
 }
 
-.color-area{
+.color-area {
     width: 200px;
     height: 120px;
     border-radius: 8px 8px 0 0;
 }
 
-.dark{
+.dark {
     background-color: #212121;
 }
 
-.primary{
+.primary {
     background-color: #F63D58;
 }
 
-.white{
+.white {
     background-color: #ffffff;
-    border: 1px solid rgba(0,0,0,.12);
+    border: 1px solid rgba(0, 0, 0, .12);
 }
 
-.color-content{
+.color-content {
     width: 200px;
     height: 148px;
     border-radius: 0 0 8px 8px;
-    border: 1px solid rgba(0,0,0,.12);
+    border: 1px solid rgba(0, 0, 0, .12);
+    border-top: none;
     background-color: #fff;
     padding: 24px;
 }
 
-.color-content h3{
+.color-content h3 {
     font-size: 18px;
     margin-block-start: 0;
     margin-block-end: 16px;
 }
 
-.color-content p{
+.color-content p {
     margin-block-start: 0;
     margin-block-end: 4px;
     font-size: 16px;
 }
 
-.color-content p span{
-    color: rgba(0,0,0,.38);
+.color-content p span {
+    color: rgba(0, 0, 0, .38);
     font-weight: bold;
     margin-right: 16px;
 }
-
-
-
-
-
-
 
 #footer {
     position: inherit !important;
