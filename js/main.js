@@ -86,9 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         triggerHook: 1
     })
         .setTween('.row', 0.6, {y: -350}) //guide 에서도 작동하게 하고 싶을 경우 .row를 #section으로 바꿔주세요.
-        .addIndicators({
-            colorTrigger: 'rgba(0,0,0,0)',
-            colorStart: 'rgba(0,0,0,0)'
-        })
         .addTo(controller);
+
+
 })

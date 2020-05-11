@@ -33,6 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
             isAutoScrolling = false;
             setMenus();
         });
+        var x = document.getElementById("lnbMenu");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
     });
 
     $(window).scroll(function () {
@@ -52,4 +58,5 @@ document.addEventListener('DOMContentLoaded', () => {
             } else item.removeClass('active');
         }
     }
+
 })

@@ -71,6 +71,7 @@
         <img src="../images/bi_playwings_black.svg" class="bi bi-b" alt="플레이윙즈 로고">
     </a>
 </div>
+
 </header>
 
   <div class="intro-guide">
@@ -81,7 +82,10 @@
 </div>
 <div id="section" class="wrap">
     <div class="lnb-wrapper">
-        <ul class="lnb">
+        <div class="lnb-button">
+            <button onclick="lnbDropDown()">배너 가이드 <i class="ri-arrow-down-s-line"></i></button>
+        </div>
+        <ul class="lnb" id="lnbMenu">
             <a href="#guide-1">
                 <li class="scroll-move">최상단 배너</li>
             </a>
@@ -431,6 +435,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollmonitor/1.2.0/scrollMonitor.js"></script>
 <script src="/js/common.js"></script>
 <script src="/js/banner-guide.js"></script>
+<script>
+    function lnbDropDown() {
+    var x = document.getElementById("lnbMenu");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+</script>
   <!-- Footer -->
 <footer id="footer">
     <div class="footer-container">
