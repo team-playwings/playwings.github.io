@@ -34,11 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
             setMenus();
         });
         var x = document.getElementById("lnbMenu");
-        if (x.style.display === "block") {
-            x.style.display = "none";
-        } else {
-            x.style.display = "block";
-        }
+        if (matchMedia("screen and (max-width: 1024px)").matches) {
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+          } 
     });
 
     $(window).scroll(function () {
