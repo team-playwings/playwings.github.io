@@ -9,7 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
         triggerElement: '#section',
         triggerHook: 0.3
     })
-        .setTween(TweenMax.to('#header', 0.2, {backgroundColor: 'rgba(255, 255, 255, 1)', borderBottom: '1px solid rgba(0,0,0,.12)'}))
+        .setTween(TweenMax.to('#header', 0.2, {
+            backgroundColor: 'rgba(255, 255, 255, 1)',
+            borderBottom: '1px solid rgba(0,0,0,.12)'
+        }))
         .setClassToggle('.bi-b', 'bi-bb')
         .addTo(controller);
 
@@ -33,14 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
             isAutoScrolling = false;
             setMenus();
         });
-        var x = document.getElementById("lnbMenu");
-        if (matchMedia("screen and (max-width: 1024px)").matches) {
-            if (x.style.display === "block") {
-                x.style.display = "none";
+
+        const lnbMenu = document.getElementById("lnbMenu");
+        if (matchMedia("screen and (max-width: 1023px)").matches) {
+            if (lnbMenu.style.display === "block") {
+                lnbMenu.style.display = "none";
             } else {
-                x.style.display = "block";
+                lnbMenu.style.display = "block";
             }
-          } 
+        }
     });
 
     $(window).scroll(function () {
@@ -60,5 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
             } else item.removeClass('active');
         }
     }
-
 })
+
+function lnbDropDown() {
+    const lnbMenu = document.getElementById("lnbMenu");
+    if (lnbMenu.style.display == "block") {
+        lnbMenu.style.display = "none";
+    } else {
+        lnbMenu.style.display = "block";
+    }
+}

@@ -6,7 +6,7 @@ table a {
     color: #F63D58;
 }
 
-table i{
+table i {
     position: relative;
     top: 2px;
 }
@@ -45,13 +45,13 @@ table i{
     background-color: #fff;
 }
 
-section {
-    padding-top: 80px;
-}
-
 .content-body {
     width: 800px;
     margin-left: 280px;
+}
+
+section {
+    padding-top: 80px;
 }
 
 section img {
@@ -145,7 +145,7 @@ hr {
     font-size: 16px;
 }
 
-.lnb-button{
+.lnb-button {
     display: none;
 }
 
@@ -223,14 +223,15 @@ hr {
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     .wrap {
         width: 100%;
         display: flex;
         flex-direction: column;
     }
 
-    .content-body section h1,.content-body section p{
+    .content-body section h1,
+    .content-body section p {
         text-align: left;
     }
 
@@ -247,7 +248,7 @@ hr {
 
     }
 
-    .lnb{
+    .lnb {
         margin: 8px 8px 8px 0;
         padding-top: 16px;
         border-radius: 8px;
@@ -257,26 +258,26 @@ hr {
         box-shadow: 0 4px 16px rgba(0, 0, 0, .12);
     }
 
-    .lnb li{
+    .lnb li {
         margin-right: 24px;
         text-align: right;
     }
-    
-    .lnb-button{
+
+    .lnb-button {
         display: flex;
         flex-direction: row-reverse;
         width: 100%;
     }
 
-    #lnbMenu{
-        display: block;
+    #lnbMenu {
+        display: none;
     }
 
-    .lnb-button button{
+    .lnb-button button {
         margin: 9px 8px 0 0;
         padding: 0 0 0 12px;
         background-color: #fff;
-        color: rgba(0,0,0, .87);
+        color: rgba(0, 0, 0, .87);
         border-radius: 8px;
         font-size: 16px;
         text-align: left;
@@ -288,8 +289,8 @@ hr {
         top: 0;
         position: fixed;
     }
-    
-    .content-body{
+
+    .content-body {
         width: 100%;
         margin-left: 0;
         padding: 0 24px;
@@ -300,13 +301,13 @@ hr {
         flex-direction: column;
         width: 100%;
     }
-    
+
     .color-chip {
         margin: 12px 0;
         display: inline-flex;
 
     }
-    
+
     .color-area {
         width: 148px;
         height: 148px;
@@ -317,7 +318,7 @@ hr {
         background-color: #ffffff;
         border: 1px solid rgba(0, 0, 0, .12);
     }
-    
+
     .color-content {
         height: 148px;
         border-radius: 0 8px 8px 0;
