@@ -24,12 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Logo
     new ScrollMagic.Scene({
-        triggerElement: '#section',
+        triggerElement: '.section',
         triggerHook: 0.3
     })
         .setTween(TweenMax.to('#header', 0.2, {backgroundColor: 'rgba(255, 255, 255, 1)'}))
         .setClassToggle('.bi-b', 'bi-bb')
-        .addIndicators()
         .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -85,7 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
         triggerElement: '.footer-trigger',
         triggerHook: 1
     })
-        .setTween('.row', 0.6, {y: -350}) //guide 에서도 작동하게 하고 싶을 경우 .row를 #section으로 바꿔주세요.
+        .setTween('.section', 0.6, {y: -350}) //guide 에서도 작동하게 하고 싶을 경우 .row를 #section으로 바꿔주세요.
+        .addIndicators()
         .addTo(controller);
 
 
