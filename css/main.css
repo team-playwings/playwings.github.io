@@ -469,6 +469,8 @@ i {
     .slide {
         width: 320px;
         height: auto;
+        padding-top: 100px;
+
     }
 
     .main-title {
