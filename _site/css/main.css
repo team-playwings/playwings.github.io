@@ -89,6 +89,7 @@ i {
     display: flex;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid rgba(0,0,0,0);
 }
 
 #header-container {
@@ -109,15 +110,6 @@ i {
     display: block;
     height: inherit;
     line-height: inherit;
-}
-
-.bi-b {
-    opacity: 0;
-
-}
-
-.bi-bb {
-    opacity: 1;
 }
 
 /* Intro */

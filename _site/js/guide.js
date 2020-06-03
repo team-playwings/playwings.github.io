@@ -1,76 +1,65 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Init ScrollMagic
-    let controller = new ScrollMagic.Controller({
-        refreshInterval: 0
-    });
-
-    // Logo
-    new ScrollMagic.Scene({
-        triggerElement: '#section',
-        triggerHook: 0.3
-    })
-        .setTween(TweenMax.to('#header', 0.2, {
-            backgroundColor: 'rgba(255, 255, 255, 1)',
-            borderBottom: '1px solid rgba(0,0,0,.12)'
-        }))
-        .setClassToggle('.bi-b', 'bi-bb')
-        .addTo(controller);
-
-    new ScrollMagic.Scene({
-        triggerElement: '.lnb-wrapper',
-        triggerHook: 0.11,
-    })
-        .setClassToggle('.lnb-wrapper', 'fixed')
-        .addTo(controller);
-
-    const menus = $('#section .lnb-wrapper .lnb a');
-    const sections = $('section');
-    let isAutoScrolling;
-
-    menus.on('click', function (e) {
-        isAutoScrolling = true;
-        const target = $($(this).attr('href'));
-        $('html').animate({
-            scrollTop: target.offset().top
-        }, 400, function () {
-            isAutoScrolling = false;
-            setMenus();
-        });
-
-        const lnbMenu = document.getElementById("lnbMenu");
-        if (matchMedia("screen and (max-width: 1023px)").matches) {
-            if (lnbMenu.style.display === "block") {
-                lnbMenu.style.display = "none";
-            } else {
-                lnbMenu.style.display = "block";
-            }
-        }
-    });
-
-    $(window).scroll(function () {
-        if (!isAutoScrolling) setMenus();
-    });
-
-    function setMenus() {
-        const scrollTop = $(window).scrollTop() + $('header').height();
-        let activeItem;
-        let item;
-        let i = sections.length;
-        while (i--) {
-            item = $(menus[i]);
-            if (!activeItem && $(sections[i]).offset().top <= scrollTop) {
-                activeItem = item;
-                item.addClass('active');
-            } else item.removeClass('active');
-        }
-    }
-})
-
 function lnbDropDown() {
     const lnbMenu = document.getElementById("lnbMenu");
     if (lnbMenu.style.display == "block") {
         lnbMenu.style.display = "none";
     } else {
         lnbMenu.style.display = "block";
+    }
+}
+
+window.onload = function () {
+    const menus = $('#section .lnb-wrapper .lnb a');
+    menus.on('click', function (e) {
+        const target = $($(this).attr('href'));
+        $('html').animate({
+            scrollTop: target.offset().top
+        }, 1000, "easeInOutExpo");
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.to(".header", {
+        backgroundColor: "rgba(255, 255, 255, 1)",
+        borderBottom: "1px solid rgba(0,0,0,.12)",
+        scrollTrigger: {
+            trigger: ".header",
+            start: "bottom",
+            end: "200% top",
+            scrub: true,
+            onUpdate: self => {
+                $("#bi-white")[0].style.opacity = 1 - self.progress;
+                $("#bi-black")[0].style.opacity = self.progress;
+            }
+        },
+    });
+
+    if (matchMedia("screen and (min-width: 1024px)").matches) {
+        gsap.to(".lnb-wrapper", {
+            scrollTrigger: {
+                trigger: ".lnb-wrapper",
+                start: -$(".header").height() - ($(".lnb-wrapper").outerHeight(true) - $(".lnb-wrapper").height()) + "px",
+                end: $(".content-body").height() - $(".header").height() - $(".lnb-wrapper").outerHeight(true) + "px",
+                pin: true,
+            },
+        });
+    }
+
+    const sections = gsap.utils.toArray("section");
+    sections.forEach((section, i) => {
+        ScrollTrigger.create({
+            trigger: section,
+            start: "-=1px",
+            onToggle: self => self.isActive && setSection(section),
+        });
+    });
+
+    let currentSection;
+
+    function setSection(newSection) {
+        if (newSection !== currentSection) {
+            $(menus[sections.indexOf(currentSection)]).removeClass('active');
+            $(menus[sections.indexOf(newSection)]).addClass('active');
+            currentSection = newSection;
+        }
     }
 }

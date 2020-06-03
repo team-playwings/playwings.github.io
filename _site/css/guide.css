@@ -222,6 +222,9 @@ hr {
     position: inherit !important;
 }
 
+.pin-spacer {
+    float: left;
+}
 
 @media screen and (max-width: 1023px) {
     .wrap {
