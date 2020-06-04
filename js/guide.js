@@ -21,15 +21,16 @@ window.onload = function () {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    const tween = gsap.to(".header", {
+    gsap.to(".header", {
         backgroundColor: "rgba(255, 255, 255, 1)",
         borderBottom: "1px solid rgba(0,0,0,.12)",
         scrollTrigger: {
-            trigger: ".header",
-            start: "bottom",
-            end: "200% top",
+            trigger: ".intro-guide",
+            start: "top",
+            end: "bottom",
             scrub: true,
             onUpdate: ({progress}) => onUpdate(progress),
+            markers: true
         },
     });
 
@@ -64,10 +65,5 @@ window.onload = function () {
             $(menus[sections.indexOf(newSection)]).addClass('active');
             currentSection = newSection;
         }
-    }
-
-    if (window.scrollY) {
-        tween.play();
-        onUpdate(1);
     }
 }
