@@ -9,6 +9,9 @@ function lnbDropDown() {
 
 window.onload = function () {
     const menus = $('#section .lnb-wrapper .lnb a');
+    const sections = gsap.utils.toArray("section");
+    let currentSection;
+
     menus.on('click', function (e) {
         const target = $($(this).attr('href'));
         $('html').animate({
@@ -17,8 +20,8 @@ window.onload = function () {
     });
 
     gsap.registerPlugin(ScrollTrigger);
-    
-    gsap.to(".header", {
+
+    const tween = gsap.to(".header", {
         backgroundColor: "rgba(255, 255, 255, 1)",
         borderBottom: "1px solid rgba(0,0,0,.12)",
         scrollTrigger: {
@@ -26,12 +29,15 @@ window.onload = function () {
             start: "bottom",
             end: "200% top",
             scrub: true,
-            onUpdate: self => {
-                $("#bi-white")[0].style.opacity = 1 - self.progress;
-                $("#bi-black")[0].style.opacity = self.progress;
-            }
+            onUpdate: ({progress}) => onUpdate(progress),
         },
     });
+
+    function onUpdate(progress) {
+        console.log(progress);
+        $("#bi-white")[0].style.opacity = 1 - progress;
+        $("#bi-black")[0].style.opacity = progress;
+    }
 
     if (matchMedia("screen and (min-width: 1024px)").matches) {
         gsap.to(".lnb-wrapper", {
@@ -44,7 +50,6 @@ window.onload = function () {
         });
     }
 
-    const sections = gsap.utils.toArray("section");
     sections.forEach((section, i) => {
         ScrollTrigger.create({
             trigger: section,
@@ -53,13 +58,16 @@ window.onload = function () {
         });
     });
 
-    let currentSection;
-
     function setSection(newSection) {
         if (newSection !== currentSection) {
             $(menus[sections.indexOf(currentSection)]).removeClass('active');
             $(menus[sections.indexOf(newSection)]).addClass('active');
             currentSection = newSection;
         }
+    }
+
+    if (window.scrollY) {
+        tween.play();
+        onUpdate(1);
     }
 }
