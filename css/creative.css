@@ -15,6 +15,11 @@ h2 del {
     font-weight: normal;
 }
 
+p:first-child {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 b {
     color: #f63d58;
 }
