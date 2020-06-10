@@ -15,13 +15,17 @@ h2 small {
     font-size: 14px;
 }
 
-h2 strong {
+strong {
     color: #f63d58;
 }
 
 body > p:first-child {
     margin-left: 0;
     margin-right: 0;
+}
+
+body > p:first-child img {
+    border-radius: 0;
 }
 
 .graph-on {
