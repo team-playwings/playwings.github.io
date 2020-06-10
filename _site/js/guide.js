@@ -17,6 +17,11 @@ window.onload = function () {
         $('html').animate({
             scrollTop: target.offset().top
         }, 1000, "easeInOutExpo");
+        if (lnbMenu.style.display == "block") {
+            lnbMenu.style.display = "none";
+        } else {
+            lnbMenu.style.display = "block";
+        }
     });
 
     gsap.registerPlugin(ScrollTrigger);
@@ -29,8 +34,7 @@ window.onload = function () {
             start: "top",
             end: "bottom",
             scrub: true,
-            onUpdate: ({progress}) => onUpdate(progress),
-            markers: true
+            onUpdate: ({progress}) => onUpdate(progress)
         },
     });
 
@@ -46,7 +50,7 @@ window.onload = function () {
                 trigger: ".lnb-wrapper",
                 start: -$(".header").height() - ($(".lnb-wrapper").outerHeight(true) - $(".lnb-wrapper").height()) + "px",
                 end: $(".content-body").height() - $(".header").height() - $(".lnb-wrapper").outerHeight(true) + "px",
-                pin: true,
+                pin: true
             },
         });
     }
@@ -54,7 +58,7 @@ window.onload = function () {
     sections.forEach((section, i) => {
         ScrollTrigger.create({
             trigger: section,
-            start: "-=1px",
+            start: "+=1px top",
             onToggle: self => self.isActive && setSection(section),
         });
     });
