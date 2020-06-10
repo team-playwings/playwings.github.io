@@ -9,6 +9,10 @@ h2 small {
     font-size: 14px;
 }
 
+h2 strong {
+    color: #f63d58;
+}
+
 h2 del {
     font-size: 20px;
     color: rgba(0, 0, 0, .6);
@@ -18,10 +22,6 @@ h2 del {
 p:first-child {
     margin-left: 0;
     margin-right: 0;
-}
-
-b {
-    color: #f63d58;
 }
 
 .graph-on {
