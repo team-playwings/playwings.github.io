@@ -464,5 +464,28 @@ table th,
 table td {
     padding: 8px;
     text-align: center;
-    border: 1px solid rgba(0, 0, 0, .12);
+}
+
+table th {
+    color: #fff;
+    background-color: #737795;
+    border-bottom: none;
+    border-right: 1px solid rgba(0, 0, 0, .12);
+}
+
+table th:first-child {
+    border-left: 1px solid #737795;
+}
+
+table th:last-child {
+    border-right: 1px solid #737795;
+}
+
+table td {
+    border-right: 1px solid rgba(0, 0, 0, .12);
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+}
+
+table td:first-child {
+    border-left: 1px solid rgba(0, 0, 0, .12);
 }
