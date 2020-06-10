@@ -31,12 +31,11 @@ body > p:first-child img {
     height: 8px;
     border-radius: 4px;
     background-color: #f63d58;
-    margin-top: 4px;
 }
 .graph-bg {
     width: calc(100% - 48px);
     height: 8px;
     border-radius: 4px;
-    margin: -16px 24px 8px 24px;
+    margin: -8px 24px 8px 24px;
     background-color: rgba(0, 0, 0, .04);
 }
