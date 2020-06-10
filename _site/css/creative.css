@@ -1,16 +1,15 @@
-h2,
-h3 {
-    margin-top: -8px;
-}
-
 h2 del {
     font-size: 20px;
     color: rgba(0, 0, 0, .6);
     font-weight: normal;
 }
 
-h2 small {
-    color: rgba(0,0,0,.38);
+h2 + h2,
+h3 + h3 {
+    margin-top: -12px;
+}
+
+small {
     font-weight: normal;
     font-size: 14px;
 }
@@ -25,6 +24,7 @@ body > p:first-child {
 
 body > p:first-child img {
     margin-top: 0;
+    margin-bottom: 16px;
     border-radius: 0;
 }
 
@@ -33,6 +33,7 @@ body > p:first-child img {
     border-radius: 4px;
     background-color: #f63d58;
 }
+
 .graph-bg {
     width: calc(100% - 48px);
     height: 8px;
