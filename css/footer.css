@@ -1,8 +1,5 @@
 #footer {
     background-color: #ffffff;
-    bottom: 0;
-    position: fixed;
-    z-index: -999; 
     width: 100vw;
     height: 350px;
     display: flex;

@@ -7,15 +7,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    gsap.registerPlugin(ScrollTrigger);
+
     // Intro Parallax
-    let timeline = new TimelineMax();
-    timeline
-        .to('#bg-5', 6, {y: -700})
-        .to('#bg-4', 6, {y: -500}, '-=6')
-        .to('#bg-3', 6, {y: -400}, '-=6')
-        .to('#bg-2', 6, {y: -300}, '-=6')
-        .to('#bg-1', 6, {y: -200}, '-=6')
-        .to('#main-contents', 6, {y: -700}, '-=6')
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger:"#hero",
+            start:"top top",
+            end: "bottom top",
+            scrub: true
+        }
+    });
+
+    gsap.utils.toArray(".parallax").forEach(layer =>{
+        const depth = layer.dataset.depth;
+        const movement = -(layer.offsetHeight * depth)
+        tl.to(layer, {y: movement, ease: "none"}, 0)
+    });
+
 
     // Init ScrollMagic
     let controller = new ScrollMagic.Controller({
@@ -23,71 +32,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Logo
-    new ScrollMagic.Scene({
-        triggerElement: '.section',
-        triggerHook: 0.3
-    })
-        .setTween(TweenMax.to('#header', 0.2, {backgroundColor: 'rgba(255, 255, 255, 1)'}))
-        .setClassToggle('.bi-b', 'bi-bb')
-        .addTo(controller);
+    gsap.to(".header", {
+        backgroundColor: "rgba(255, 255, 255, 1)",
+        borderBottom: "1px solid rgba(0,0,0,.12)",
+        scrollTrigger: {
+            trigger: "#content",
+            start: "top",
+            end: "top",
+            scrub: true,
+            onUpdate: ({progress}) => onUpdate(progress),
+        },
+    });
 
-    new ScrollMagic.Scene({
-        triggerElement: 'main',
-        duration: '200%',
-        triggerHook: 0
-    })
-        .setTween(timeline)
-        .setPin('#intro')
-        .addTo(controller);
+    function onUpdate(progress) {
+        $("#bi-white")[0].style.opacity = 1 - progress;
+        $("#bi-black")[0].style.opacity = progress;
+    }
 
     // Image Fade In Up
-    $('.content-img').each(function () {
-        new ScrollMagic.Scene({
-            triggerElement: this,
-            triggerHook: 0.8
-        })
-            .setClassToggle(this, 'fade-in')
-            .addTo(controller);
+    $(".section").each(function (i) {
+        let targetImg = $(this).find("img");
+        const imgTl = gsap.timeline({
+            scrollTrigger:{
+                trigger: this,
+                start: "-=100px 30%",
+                toggleActions:"play none none none",
+            }
+        });
+        imgTl.fromTo(targetImg, 1, {opacity: 0, y: 50}, {opacity: 1, y: 0})
     });
 
     // Title Fade In Up
-    $(".section-wrapper").each(function (i) {
+    $(".content-text").each(function (i) {
         let target1 = $(this).find("h1");
         let target2 = $(this).find("p");
-        var titleTl1 = new TimelineMax();
+        const titleTl1 = gsap.timeline({
+            scrollTrigger:{
+                trigger: this,  
+                start: "top 50%",
+                toggleActions: "play none none none none"
+            }
+        });
         titleTl1.fromTo(target1, 1, {opacity: 0, y: 50}, {opacity: 1, y: 0})
         titleTl1.fromTo(target2, 1, {opacity: 0, y: 50}, {opacity: 1, y: 0}, '-=0.8')
-
-        new ScrollMagic.Scene({
-            triggerElement: this,
-            triggerHook: 0.5
-        })
-            .setTween(titleTl1)
-            .addTo(controller);
     });
-
-    // Title Fade In Up 2
-    let titleCenter = $('.content-text-2').find('h1');
-    let descCenter = $('.content-text-2').find('p');
-    var titleTl2 = new TimelineMax();
-    titleTl2.fromTo(titleCenter, 1, {opacity: 0, y: 50}, {opacity: 1, y: 0})
-    titleTl2.fromTo(descCenter, 1, {opacity: 0, y: 50}, {opacity: 1, y: 0}, '-=0.8')
-
-    new ScrollMagic.Scene({
-        triggerElement: '.section-wrapper-2',
-        triggerHook: 0.4
-    })
-        .setTween(titleTl2)
-        .addTo(controller);
-
-    new ScrollMagic.Scene({
-        triggerElement: '.footer-trigger',
-        triggerHook: 1
-    })
-        .setTween('.section', 0.6, {y: -350}) //guide 에서도 작동하게 하고 싶을 경우 .row를 #section으로 바꿔주세요.
-        .addIndicators({colorStart: 'rgba(0,0,0,0)',
-                        colorTrigger: 'rgba(0,0,0,0)'})
-        .addTo(controller);
-
 
 })
