@@ -3,6 +3,12 @@ h3 {
     margin-top: -8px;
 }
 
+h2 del {
+    font-size: 20px;
+    color: rgba(0, 0, 0, .6);
+    font-weight: normal;
+}
+
 h2 small {
     color: rgba(0,0,0,.38);
     font-weight: normal;
@@ -13,13 +19,7 @@ h2 strong {
     color: #f63d58;
 }
 
-h2 del {
-    font-size: 20px;
-    color: rgba(0, 0, 0, .6);
-    font-weight: normal;
-}
-
-p:first-child {
+body > p:first-child {
     margin-left: 0;
     margin-right: 0;
 }
