@@ -446,12 +446,9 @@ ol, ul {
     padding-left: 24px;
 }
 
-p {
-
-}
-
 p img {
     border-radius: 4px;
+    margin-top: 16px;
 }
 
 table {

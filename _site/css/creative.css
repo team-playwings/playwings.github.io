@@ -20,10 +20,11 @@ strong {
 }
 
 body > p:first-child {
-    margin: 0 0 40px 0;
+    margin: 0;
 }
 
 body > p:first-child img {
+    margin-top: 0;
     border-radius: 0;
 }
 
