@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tl.to(layer, {y: movement, ease: "none"}, 0)
     });
 
+
     // Init ScrollMagic
     let controller = new ScrollMagic.Controller({
         refreshInterval: 0
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollTrigger:{
                 trigger: this,
                 start: "-=100px 30%",
-                toggleActions:"restart none none none",
+                toggleActions:"play none none none",
             }
         });
         imgTl.fromTo(targetImg, 1, {opacity: 0, y: 50}, {opacity: 1, y: 0})
@@ -69,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollTrigger:{
                 trigger: this,  
                 start: "top 50%",
-                toggleActions: "restart none none none none"
+                toggleActions: "play none none none none"
             }
         });
         titleTl1.fromTo(target1, 1, {opacity: 0, y: 50}, {opacity: 1, y: 0})
