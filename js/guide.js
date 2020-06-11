@@ -39,7 +39,6 @@ window.onload = function () {
     });
 
     function onUpdate(progress) {
-        console.log(progress);
         $("#bi-white")[0].style.opacity = 1 - progress;
         $("#bi-black")[0].style.opacity = progress;
     }

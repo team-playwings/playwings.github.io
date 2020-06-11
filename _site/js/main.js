@@ -40,14 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
             start: "top",
             end: "top",
             scrub: true,
-            onUpdate: ({progress}) => onUpdate(progress),
         },
     });
 
-    function onUpdate(progress) {
-        $("#bi-white")[0].style.opacity = 1 - progress;
-        $("#bi-black")[0].style.opacity = progress;
-    }
+    document.getElementById('bi-white').style.visibility= "hidden";
 
     // Image Fade In Up
     $(".section").each(function (i) {

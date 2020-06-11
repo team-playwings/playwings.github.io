@@ -77,6 +77,7 @@ p {
     line-height: inherit;
 }
 
+
 /* Intro Parallax*/
 #hero {
     width: 100vw;
@@ -369,10 +370,6 @@ i {
 
     .bi {
         left: 24px;
-    }
-
-    #main-contents {
-        align-items: center;
     }
     
     .button-app {
