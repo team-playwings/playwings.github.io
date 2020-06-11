@@ -96,23 +96,23 @@ p {
   }
 
 .layer-bg {
-    background-image: url("../images/bg_5.jpg");
+    background-image: url("https://res.cloudinary.com/kyte/image/upload/q_auto/v1591848713/playwings/website/bg-1.jpg");
 }
 
 .layer-1 {
-    background-image: url("../images/bg_4.png");
+    background-image: url("https://res.cloudinary.com/kyte/image/upload/q_auto/v1591848713/playwings/website/bg-2.png");
 }
 
 .layer-2 {
-    background-image: url("../images/bg_3.png");
+    background-image: url("https://res.cloudinary.com/kyte/image/upload/q_auto/v1591848713/playwings/website/bg-3.png");
 }
 
 .layer-3 {
-    background-image: url("../images/bg_2.png");
+    background-image: url("https://res.cloudinary.com/kyte/image/upload/q_auto/v1591848714/playwings/website/bg-4.png");
 }
 
 .layer-4 {
-    background-image: url("../images/bg_1.png");
+    background-image: url("https://res.cloudinary.com/kyte/image/upload/q_auto/v1591848713/playwings/website/bg-5.png");
 }
 
 #main-content{
