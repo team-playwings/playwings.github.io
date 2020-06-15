@@ -467,6 +467,7 @@ p img {
 table {
     border-collapse: collapse;
     width: calc(100% - 48px);
+    margin-top: 16px;
     margin-bottom: 16px;
 }
 
