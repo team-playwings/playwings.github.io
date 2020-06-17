@@ -469,12 +469,12 @@ table {
     width: calc(100% - 48px);
     margin-top: 16px;
     margin-bottom: 16px;
+    font-size: 12px;
 }
 
 table th,
 table td {
     padding: 8px;
-    text-align: center;
 }
 
 table th {
