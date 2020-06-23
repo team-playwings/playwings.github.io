@@ -57,7 +57,6 @@ window.onload = function () {
       trigger: section,
       start: "top-=10px",
       onToggle: self => self.isActive && setSection(section),
-      markers: true,
     });
   });
 
