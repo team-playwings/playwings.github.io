@@ -3,3 +3,5 @@ description: 찾기 힘든 항공권 특가정보, 한 눈에 확인하세요! �
 url: "https://www.playwings.co.kr"
 permalink: 
 cloudinary: https://res.cloudinary.com/kyte/image/upload/q_auto
+include:
+  - .well-known
