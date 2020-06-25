@@ -18,7 +18,7 @@ table i {
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    background: url(https://res.cloudinary.com/kyte/image/upload/q_auto/v1591861703/playwings/website/banner-guide/hero.jpg);
+    background: url(https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/website/banner-guide/hero);
     background-size: cover;
     background-position: center;
 }

@@ -45,9 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const imgTl = gsap.timeline({
             scrollTrigger:{
                 trigger: this,
-                start: "-=100px 50%",
+                start: "top 80%",
                 toggleActions:"play none none none",
-                markers: true
             }
         });
         imgTl.fromTo(targetImg, 1, {opacity: 0, y: 50}, {opacity: 1, y: 0})
