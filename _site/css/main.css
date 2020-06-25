@@ -54,7 +54,7 @@ p {
     display: flex;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0);
-    border-bottom: 1px solid rgba(0,0,0,0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
 
 #header-container {
@@ -94,7 +94,7 @@ p {
     height: 100vh;
     position: fixed;
     z-index: -1;
-  }
+}
 
 .layer-bg {
     background-image: url("https://res.cloudinary.com/kyte/image/upload/q_auto/v1591848713/playwings/website/bg-1.jpg");
@@ -116,7 +116,7 @@ p {
     background-image: url("https://res.cloudinary.com/kyte/image/upload/q_auto/v1591848713/playwings/website/bg-5.png");
 }
 
-#main-content{
+#main-content {
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -202,7 +202,7 @@ i {
 
 /* Contents */
 
-.container{
+.container {
     width: 100vw;
     height: 100vh;
     background-color: #ffffff;
@@ -211,40 +211,40 @@ i {
     justify-content: center;
 }
 
-.container:nth-child(2){
+.container:nth-child(2) {
     background-color: #f5f5f5;
 }
 
-.section{
+.section {
     width: 1080px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.container:nth-child(2)>.section{
-    flex-direction: row-reverse ;
+.container:nth-child(2) > .section {
+    flex-direction: row-reverse;
 }
 
-.content-img{
+.content-img {
     width: 475px;
     height: 100%;
     opacity: 0;
 }
 
-.content-text h1, .content-text p{
+.content-text h1, .content-text p {
     opacity: 0;
 }
 
 /* Background-red */
-.text-white{
+.text-white {
     color: #ffffff;
     text-align: center;
     width: 100%;
     margin-top: 30vh;
 }
 
-.container-r{
+.container-r {
     width: 100vw;
     height: 100vh;
     background-color: #F63D58;
@@ -255,14 +255,14 @@ i {
     overflow: hidden;
 }
 
-.content-img-2{
+.content-img-2 {
     position: absolute;
     bottom: 0;
     left: 50%;
     background-color: azure;
 }
 
-.ds{
+.ds {
     width: 720px;
     height: auto;
     position: absolute;
@@ -299,10 +299,8 @@ i {
 }
 
 
-
-
 @media screen and (max-width: 1920px) {
-    .text-white{
+    .text-white {
         margin-top: 15vh;
     }
 
@@ -371,7 +369,7 @@ i {
     .bi {
         left: 24px;
     }
-    
+
     .button-app {
         display: block;
     }
@@ -380,22 +378,22 @@ i {
         display: none;
     }
 
-    .container{
+    .container {
         height: 100%;
         padding: 80px 0;
     }
-    
-    .section{
+
+    .section {
         width: 100vw;
         flex-direction: column;
         align-items: center;
     }
-    
-    .container:nth-child(2)>.section{
-        flex-direction: column ;
+
+    .container:nth-child(2) > .section {
+        flex-direction: column;
     }
-    
-    .content-img{
+
+    .content-img {
         width: 320px;
         height: auto;
         padding-top: 40px;
@@ -405,7 +403,7 @@ i {
         bottom: -35%;
         left: 20%;
     }
-    
+
     .ds {
         width: 600px;
     }

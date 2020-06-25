@@ -25,12 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         tl.to(layer, {y: movement, ease: "none"}, 0)
     });
 
-
-    // Init ScrollMagic
-    let controller = new ScrollMagic.Controller({
-        refreshInterval: 0
-    });
-
     // Logo
     gsap.to(".header", {
         backgroundColor: "rgba(255, 255, 255, 1)",
@@ -51,8 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const imgTl = gsap.timeline({
             scrollTrigger:{
                 trigger: this,
-                start: "-=100px 30%",
+                start: "-=100px 50%",
                 toggleActions:"play none none none",
+                markers: true
             }
         });
         imgTl.fromTo(targetImg, 1, {opacity: 0, y: 50}, {opacity: 1, y: 0})
