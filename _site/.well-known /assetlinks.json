@@ -1,0 +1,11 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.fridaynoons.playwings",
+    "sha256_cert_fingerprints": [
+      "FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C",
+      "DD:60:0C:6C:A0:88:C9:70:C5:66:74:38:C7:12:12:C2:C3:E5:41:E9:5E:8B:FC:BD:8F:DE:E8:95:1C:71:13:D8"
+    ]
+  }
+}]
