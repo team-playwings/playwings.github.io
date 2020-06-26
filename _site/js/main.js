@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const titleTl1 = gsap.timeline({
             scrollTrigger:{
                 trigger: this,  
-                start: "top 50%",
+                start: "top 75%",
                 toggleActions: "play none none none none"
             }
         });

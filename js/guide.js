@@ -53,7 +53,6 @@ window.onload = function () {
             start: -$('.header').height() + 'px',
             end: "bottom-=" + $('.header').height() + 'px',
             onToggle: self => self.isActive && setSection(section),
-            markers: true
         });
     });
 
