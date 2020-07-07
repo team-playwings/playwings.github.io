@@ -2,4 +2,3 @@
 .git/*
 .s3ignore
 README.md
-deploy.sh
