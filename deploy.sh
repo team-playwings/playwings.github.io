@@ -1,4 +1,4 @@
-#!/bin/bashi
+#!/bin/bash
 STAGE=$(echo $1 | tr 'A-Z' 'a-z')
 if [ "${STAGE}" == "" ]; then
   echo "Usage: ./deploy.sh <stage>"
