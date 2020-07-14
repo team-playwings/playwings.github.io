@@ -8,7 +8,7 @@ fi
 echo "Deploying to ${STAGE}"
 if [ "${STAGE}" == "dev" ]; then
   DEPLOY_URL=s3://www-$STAGE.playwings.co.kr
-elif  [ "${STAGE} == "prd" ]; then
+elif  [ "${STAGE}" == "prd" ]; then
   DEPLOY_URL=s3://www.playwings.co.kr
 else
   exit 1
