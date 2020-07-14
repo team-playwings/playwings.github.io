@@ -4,3 +4,5 @@ url: "https://www.playwings.co.kr"
 cloudinary: https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto
 include:
   - .well-known
+exclude:
+  - deploy.sh
