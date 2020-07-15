@@ -15,12 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
             trigger:"#hero",
             start:"top top",
             end: "bottom top",
-            scrub: true
+            scrub: true,
+            onEnterBack: () => $("#hero").css("opacity", 1),
+            onLeave: () => $("#hero").css("opacity", 0)
         }
     });
-
+    
     gsap.utils.toArray(".parallax").forEach(layer =>{
-        tl.to(layer, {y: -(layer.offsetHeight * layer.dataset.depth), ease: "none"}, 0)
+        tl.to(layer, {
+            y: -(layer.offsetHeight * layer.dataset.depth),
+            ease: "none"
+        }, 0)
     });
 
     // Logo
@@ -64,5 +69,4 @@ document.addEventListener('DOMContentLoaded', () => {
         titleTl1.fromTo(target1, 1, {opacity: 0, y: 50}, {opacity: 1, y: 0})
         titleTl1.fromTo(target2, 1, {opacity: 0, y: 50}, {opacity: 1, y: 0}, '-=0.8')
     });
-
 })
