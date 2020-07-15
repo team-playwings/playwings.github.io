@@ -16,11 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
             start:"top top",
             end: "bottom top",
             scrub: true,
-            onEnterBack: () => $("#hero").css("opacity", 1),
-            onLeave: () => $("#hero").css("opacity", 0)
+            onEnterBack: () => $(".layer").css("opacity", 1),
+            onLeave: () => $(".layer").css("opacity", 0)
         }
     });
-    
+
     gsap.utils.toArray(".parallax").forEach(layer =>{
         tl.to(layer, {
             y: -(layer.offsetHeight * layer.dataset.depth),
