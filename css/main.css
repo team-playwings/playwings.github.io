@@ -97,13 +97,13 @@ p {
 }
 
 .layer-bg {
-    background-color: #fefefe;
-    /* background-image: url("https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/website/bg-1.jpg"); */
+    /* background-color: #fefefe; */
+    background-image: url("https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/website/bg-1.jpg");
 }
 
-.layer-1 {
+/* .layer-1 {
     background-image: url("https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/website/bg-2.png");
-}
+} */
 
 .layer-2 {
     background-image: url("https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/website/bg-3.png");
