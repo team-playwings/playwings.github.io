@@ -97,7 +97,8 @@ p {
 }
 
 .layer-bg {
-    background-image: url("https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/website/bg-1.jpg");
+    background-color: #fefefe;
+    /* background-image: url("https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/website/bg-1.jpg"); */
 }
 
 .layer-1 {
