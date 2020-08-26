@@ -95,7 +95,15 @@ p {
     position: fixed;
     z-index: -1;
 }
-
+#hero-vid {
+    backface-visibility: hidden;
+    position: fixed;
+    z-index: -2;
+    top: 50%;
+    left: 50%;
+    height: auto !important;
+    transform: translate(-50%, -50%);
+}
 .layer-bg {
      background-image: url("https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/website/bg-1.jpg");
 }
