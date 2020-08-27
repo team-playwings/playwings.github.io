@@ -1,46 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-    //Stellar
-    $(function () {
-        $.stellar({
-            horizontalScrolling: false,
-            verticalOffset: 150
-        });
-    });
-
     gsap.registerPlugin(ScrollTrigger);
 
-    // Intro Parallax
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger:"#hero",
-            start:"top top",
-            end: "bottom top",
-            scrub: true,
-            onEnterBack: () => $(".layer").css("opacity", 1),
-            onLeave: () => $(".layer").css("opacity", 0)
-        }
-    });
+    document.getElementById('bi-black').style.opacity= 0;
 
-    gsap.utils.toArray(".parallax").forEach(layer =>{
-        tl.to(layer, {
-            y: -(layer.offsetHeight * layer.dataset.depth),
-            ease: "none"
-        }, 0)
-    });
-
-    // Logo
     gsap.to(".header", {
         backgroundColor: "rgba(255, 255, 255, 1)",
         borderBottom: "1px solid rgba(0,0,0,.12)",
         scrollTrigger: {
             trigger: "#content",
-            start: "top",
+            start: "top-=" + $(".header").height(),
             end: "top",
             scrub: true,
+            onUpdate: ({progress}) => onUpdate(progress)
         },
     });
 
-    document.getElementById('bi-white').style.visibility= "hidden";
+    function onUpdate(progress) {
+        $("#bi-white")[0].style.opacity = 1 - progress;
+        $("#bi-black")[0].style.opacity = progress;
+    }
 
     // Image Fade In Up
     $(".section").each(function (i) {

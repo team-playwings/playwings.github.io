@@ -23,9 +23,9 @@ window.onload = function () {
         backgroundColor: "rgba(255, 255, 255, 1)",
         borderBottom: "1px solid rgba(0,0,0,.12)",
         scrollTrigger: {
-            trigger: ".intro-guide",
-            start: "top",
-            end: "bottom",
+            trigger: ".content-body",
+            start: "top-=" + $(".header").height(),
+            end: "top",
             scrub: true,
             onUpdate: ({progress}) => onUpdate(progress)
         },
