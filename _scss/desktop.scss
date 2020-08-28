@@ -1,0 +1,49 @@
+@media (min-width: 1024px) {
+
+}
+@media screen and (max-width: 1920px) {
+  .text-white {
+    margin-top: 15vh;
+  }
+  .content-img-2 {
+    bottom: -10%;
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .content-img-2 {
+    top: 20%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  button {
+    font-size: 0.9em;
+  }
+  .bi {
+    width: 120px;
+  }
+  #header {
+    height: 66px;
+  }
+  #header-container {
+    height: 66px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .content-text-2 {
+    top: 15%;
+  }
+  .content-img-2 {
+    top: 32%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .content-img-2 {
+    bottom: -15%;
+    transform: scale(0.8);
+  }
+}
