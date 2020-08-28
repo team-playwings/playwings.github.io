@@ -262,3 +262,66 @@ i {
 .ds-7 {
   transform: translate(200px, 200px);
 }
+#footer {
+  background-color: #ffffff;
+  width: 100vw;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+}
+
+.inner {
+  width: 1028px;
+  height: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  color: rgba(0, 0, 0, .6);
+  margin-right: 2em;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.icon i {
+  font-size: 32px;
+}
+
+.copyright {
+  color: rgba(0, 0, 0, .6);
+  padding: 0;
+  font-size: 12px;
+  word-break: keep-all;
+}
+
+.copy-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.copy-menu {
+  list-style: none;
+  display: inline-flex;
+  padding-inline-start: 0;
+  margin-bottom: 24px;
+}
+
+.copy-menu li {
+  padding-right: 24px;
+}
+
+.copy-info {
+  line-height: 1.5em;
+  margin-block-start: 0;
+  margin-block-end: 32px;
+}
