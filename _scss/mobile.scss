@@ -61,8 +61,17 @@
   .ds-7 {
     display: none;
   }
+  #main-content {
+    top: 40%;
+  }
   #main-content img {
     width: 240px;
+  }
+  #main-mouse {
+    bottom: 64px;
+  }
+  .button {
+    margin-top: 32px;
   }
   .inner {
     width: 100%;
