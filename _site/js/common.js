@@ -1,12 +1,32 @@
-document.documentElement.className = 'js';
-let supportsCssVars = function () {
-    let s = document.createElement('style'),
-        support;
+var width;
 
-    s.innerHTML = "root: { --tmp-var: bold; }";
-    document.head.appendChild(s);
-    support = !!(window.CSS && window.CSS.supports && window.CSS.supports('font-weight', 'var(--tmp-var)'));
-    s.parentNode.removeChild(s);
-    return support;
-}
-if (!supportsCssVars()) alert('Please view this demo in a modern browser that supports CSS Variables.')
+$(function () {
+    changeVideo();
+    window.onresize = changeVideo;
+});
+
+function changeVideo() {
+    if (width != window.innerWidth) {
+        var video = $('#video');
+        var hero = $('#hero-vid');
+        if (window.innerWidth > window.innerHeight) {
+            video.attr('src', 'https://res.cloudinary.com/kyte/video/upload/q_auto:best,f_auto/playwings/web/video-landscape.mp4');
+            if (960 / 540 > window.innerWidth / window.innerHeight) {
+                hero.css('height', window.innerHeight);
+            } else {
+                hero.css('width', window.innerWidth);
+            }
+            $('#arrow-down-button').css('margin-top', window.innerHeight * .42);
+        } else {
+            video.attr('src', 'https://res.cloudinary.com/kyte/video/upload/q_auto:best,f_auto/playwings/web/video-portrait.mp4');
+            if (1080 / 608 > window.innerHeight / window.innerWidth) {
+                hero.css('width', window.innerWidth);
+            } else {
+                hero.css('height', window.innerHeight);
+            }
+            $('#arrow-down-button').css('margin-top', window.innerHeight * .28);
+        }
+        width = window.innerWidth;
+        hero[0].load();
+    }
+};
