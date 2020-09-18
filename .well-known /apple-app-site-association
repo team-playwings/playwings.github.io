@@ -16,13 +16,18 @@ permalink: .well-known/apple-app-site-association
           "/creatives/*",
           "/search",
           "/search/flight_calendar",
+          "/search/hotel_calendar",
+          "/search/hotel_list",
           "/login",
           "/mypage",
           "/deals",
           "/deals/*",
+          "/hotels",
+          "/hotels/*",
           "/setting"
         ]
       }
     ]
   }
 }
+
