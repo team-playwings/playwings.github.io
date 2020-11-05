@@ -1,0 +1,49 @@
+---
+layout: default
+category: guide
+title: 플레이윙즈 - 개인정보처리방침
+---
+<div class="intro-guide">
+  <div class="intro-title">
+    <h1>개인정보처리방침</h1>
+  </div>
+  <div class="overlay-guide"></div>
+</div>
+<div id="section" class="wrap">
+  <div class="lnb-wrapper">
+    <ul class="lnb lnb-web" id="lnbMenu">
+      <a href="/policies/terms">
+        <li class="scroll-move">이용약관</li>
+      </a>
+      <a href="/policies/privacy">
+        <li class="scroll-move active">개인정보처리방침</li>
+      </a>
+    </ul>
+  </div>
+  <div class="content-body">
+    <div style="padding-top: 64px;min-height: 100vh" id="content"></div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/guide.js"></script>
+<script>
+  let md;
+  require(['https://cdnjs.cloudflare.com/ajax/libs/remarkable/2.0.1/remarkable.min.js'], function (remarkable) {
+    md = new remarkable.Remarkable({
+      html: true,
+      breaks: true,
+    });
+  });
+
+  //Get entry
+  fetch('https://cdn.contentful.com/spaces/pcs8f5kjnl9o/entries/3paoKNU5SEToP3hghC8RvM?access_token=PPreW9r2-1xjsKymrdfXd7BMymHWgPOwujS5KU8Lq3U')
+          .then(response => response.json())
+          .then(function (entry) {
+            $('#content').html(md.render(entry.fields.content));
+          });
+</script>
