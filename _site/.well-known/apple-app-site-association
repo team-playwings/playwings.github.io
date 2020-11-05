@@ -12,13 +12,18 @@
           "/creatives/*",
           "/search",
           "/search/flight_calendar",
+          "/search/hotel_calendar",
+          "/search/hotel_list",
           "/login",
           "/mypage",
           "/deals",
           "/deals/*",
+          "/hotels",
+          "/hotels/*",
           "/setting"
         ]
       }
     ]
   }
 }
+
