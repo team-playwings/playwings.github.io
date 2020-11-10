@@ -34,7 +34,7 @@
     
     <link rel="stylesheet" href="/css/guide.css"/>
     
-    <link rel="stylesheet" href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.4.0/fonts/remixicon.css">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -81,10 +81,10 @@
 <div id="section" class="wrap">
   <div class="lnb-wrapper">
     <ul class="lnb lnb-web" id="lnbMenu">
-      <a href="/policies/terms">
+      <a href="/policies/terms.html">
         <li class="scroll-move active">이용약관</li>
       </a>
-      <a href="/policies/privacy">
+      <a href="/policies/privacy.html">
         <li class="scroll-move">개인정보처리방침</li>
       </a>
     </ul>
@@ -101,20 +101,22 @@
 <script src="/js/common.js"></script>
 <script src="/js/guide.js"></script>
 <script>
-  let md;
-  require(['https://cdnjs.cloudflare.com/ajax/libs/remarkable/2.0.1/remarkable.min.js'], function (remarkable) {
-    md = new remarkable.Remarkable({
-      html: true,
-      breaks: true,
+  window.onload = function () {
+    let md;
+    require(['https://cdnjs.cloudflare.com/ajax/libs/remarkable/2.0.1/remarkable.min.js'], function (remarkable) {
+      md = new remarkable.Remarkable({
+        html: true,
+        breaks: true,
+      });
     });
-  });
 
-  //Get entry
-  fetch('https://cdn.contentful.com/spaces/pcs8f5kjnl9o/entries/7I1nMGda0INxYYR7jn3wKd?access_token=PPreW9r2-1xjsKymrdfXd7BMymHWgPOwujS5KU8Lq3U')
-          .then(response => response.json())
-          .then(function (entry) {
-            $('#content').html(md.render(entry.fields.content));
-          });
+    //Get entry
+    fetch('https://cdn.contentful.com/spaces/pcs8f5kjnl9o/entries/7I1nMGda0INxYYR7jn3wKd?access_token=PPreW9r2-1xjsKymrdfXd7BMymHWgPOwujS5KU8Lq3U')
+            .then(response => response.json())
+            .then(function (entry) {
+              $('#content').html(md.render(entry.fields.content));
+            });
+  }
 </script>
   <!-- Footer -->
 <footer id="footer">

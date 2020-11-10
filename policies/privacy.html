@@ -12,10 +12,10 @@ title: 플레이윙즈 - 개인정보처리방침
 <div id="section" class="wrap">
   <div class="lnb-wrapper">
     <ul class="lnb lnb-web" id="lnbMenu">
-      <a href="/policies/terms">
+      <a href="/policies/terms.html">
         <li class="scroll-move">이용약관</li>
       </a>
-      <a href="/policies/privacy">
+      <a href="/policies/privacy.html">
         <li class="scroll-move active">개인정보처리방침</li>
       </a>
     </ul>
@@ -32,18 +32,20 @@ title: 플레이윙즈 - 개인정보처리방침
 <script src="/js/common.js"></script>
 <script src="/js/guide.js"></script>
 <script>
-  let md;
-  require(['https://cdnjs.cloudflare.com/ajax/libs/remarkable/2.0.1/remarkable.min.js'], function (remarkable) {
-    md = new remarkable.Remarkable({
-      html: true,
-      breaks: true,
+  window.onload = function () {
+    let md;
+    require(['https://cdnjs.cloudflare.com/ajax/libs/remarkable/2.0.1/remarkable.min.js'], function (remarkable) {
+      md = new remarkable.Remarkable({
+        html: true,
+        breaks: true,
+      });
     });
-  });
 
-  //Get entry
-  fetch('https://cdn.contentful.com/spaces/pcs8f5kjnl9o/entries/3paoKNU5SEToP3hghC8RvM?access_token=PPreW9r2-1xjsKymrdfXd7BMymHWgPOwujS5KU8Lq3U')
-          .then(response => response.json())
-          .then(function (entry) {
-            $('#content').html(md.render(entry.fields.content));
-          });
+    //Get entry
+    fetch('https://cdn.contentful.com/spaces/pcs8f5kjnl9o/entries/3paoKNU5SEToP3hghC8RvM?access_token=PPreW9r2-1xjsKymrdfXd7BMymHWgPOwujS5KU8Lq3U')
+            .then(response => response.json())
+            .then(function (entry) {
+              $('#content').html(md.render(entry.fields.content));
+            });
+  }
 </script>
