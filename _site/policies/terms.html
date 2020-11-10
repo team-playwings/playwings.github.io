@@ -101,13 +101,11 @@
 <script src="/js/common.js"></script>
 <script src="/js/guide.js"></script>
 <script>
-  window.onload = function () {
-    let md;
-    require(['https://cdnjs.cloudflare.com/ajax/libs/remarkable/2.0.1/remarkable.min.js'], function (remarkable) {
-      md = new remarkable.Remarkable({
-        html: true,
-        breaks: true,
-      });
+  let md;
+  require(['https://cdnjs.cloudflare.com/ajax/libs/remarkable/2.0.1/remarkable.min.js'], function (remarkable) {
+    md = new remarkable.Remarkable({
+      html: true,
+      breaks: true,
     });
 
     //Get entry
@@ -116,7 +114,7 @@
             .then(function (entry) {
               $('#content').html(md.render(entry.fields.content));
             });
-  }
+  });
 </script>
   <!-- Footer -->
 <footer id="footer">
