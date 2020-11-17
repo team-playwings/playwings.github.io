@@ -32,6 +32,10 @@ title: 플레이윙즈 - 개인정보처리방침
 <script src="/js/common.js"></script>
 <script src="/js/guide.js"></script>
 <script>
+  const parameters = getParameters();
+  const id = parameters.id || '3paoKNU5SEToP3hghC8RvM';
+  const baseUrl = 'https://cdn.contentful.com/spaces/pcs8f5kjnl9o/entries/' + id + '?access_token=PPreW9r2-1xjsKymrdfXd7BMymHWgPOwujS5KU8Lq3U';
+
   let md;
   require(['https://cdnjs.cloudflare.com/ajax/libs/remarkable/2.0.1/remarkable.min.js'], function (remarkable) {
     md = new remarkable.Remarkable({
@@ -40,7 +44,7 @@ title: 플레이윙즈 - 개인정보처리방침
     });
 
     //Get entry
-    fetch('https://cdn.contentful.com/spaces/pcs8f5kjnl9o/entries/3paoKNU5SEToP3hghC8RvM?access_token=PPreW9r2-1xjsKymrdfXd7BMymHWgPOwujS5KU8Lq3U')
+    fetch(baseUrl)
             .then(response => response.json())
             .then(function (entry) {
               $('#content').html(md.render(entry.fields.content));
