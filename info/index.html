@@ -1,0 +1,61 @@
+---
+layout: default
+category: guide
+title: 플레이윙즈
+---
+<div class="intro-guide">
+    <div class="intro-title">
+        <h1 id="title"></h1>
+    </div>
+    <div class="overlay-guide"></div>
+</div>
+<div id="section" class="wrap">
+    <div class="lnb-wrapper">
+        <ul class="lnb lnb-web" id="lnbMenu">
+            <li id="side-menu" class="scroll-move active"></li>
+        </ul>
+    </div>
+    <div class="content-body">
+        <div style="padding-top: 64px;min-height: 100vh" id="content"></div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/guide.js"></script>
+<script>
+    const parameters = getParameters();
+    const id = parameters.id || '3paoKNU5SEToP3hghC8RvM';
+    const baseUrl = 'https://cdn.contentful.com/spaces/pcs8f5kjnl9o/entries/' + id + '?access_token=PPreW9r2-1xjsKymrdfXd7BMymHWgPOwujS5KU8Lq3U';
+
+    let md;
+    require(['https://cdnjs.cloudflare.com/ajax/libs/remarkable/2.0.1/remarkable.min.js'], function (remarkable) {
+        md = new remarkable.Remarkable({
+            html: true,
+            breaks: true,
+        });
+
+        //Get entry
+        fetch(baseUrl)
+                .then(response => response.json())
+                .then(function (entry) {
+                    let title;
+                    switch (entry.sys.contentType.sys.id) {
+                        case "cscenter":
+                            title = "자주 묻는 질문";
+                            break;
+
+                        default:
+                            title = "공지사항";
+                            break;
+
+                    }
+                    $('#title').html(title);
+                    $('#side-menu').html(title);
+                    $('#content').html(md.render(entry.fields.content));
+                });
+    });
+</script>

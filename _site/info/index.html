@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description"
+          content="찾기 힘든 항공권 특가정보, 한 눈에 확인하세요! 얼리버드 프로모션 예매, 땡처리 비행기표 예약 등">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="keywords" content="항공권, 특가, 비행기표, 예매, 예약, 프로모션, 땡처리">
+    <meta property="fb:app_id" content="1443665405900980"/>
+    <meta property="og:site_name" content="플레이윙즈">
+    <meta property="og:title" content="플레이윙즈">
+    <meta property="og:description" content="찾기 힘든 항공권 특가정보, 한 눈에 확인하세요! 얼리버드 프로모션 예매, 땡처리 비행기표 예약 등">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.playwings.co.kr">
+    <meta property="og:image" content="https://www.playwings.co.kr/images/opengraph.jpg">
+
+    <meta name="apple-itunes-app" content="app-id=1050019372">
+
+    <title>플레이윙즈</title>
+
+    <link rel="canonical" href="/info/">
+    <link rel="alternate" type="application/rss+xml" title="플레이윙즈" href="/feed.xml">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f63d58">
+
+    <link rel="stylesheet" href="/css/main.css"/>
+    
+    <link rel="stylesheet" href="/css/guide.css"/>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.4.0/fonts/remixicon.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48404430-14"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-48404430-14');
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Playwings",
+            "url": "https://www.playwings.co.kr/",
+            "sameAs": [
+                "https://itunes.apple.com/kr/app/id1050019372",
+                "https://play.google.com/store/apps/details?id=com.fridaynoons.playwings",
+                "https://www.facebook.com/playwings/",
+                "https://www.instagram.com/playwings_app/"
+            ]
+        }
+    </script>
+</head>
+  <body>
+  <header id="header"  class="header">
+<div id="header-container">
+    <a href="/">
+        <img src="https://res.cloudinary.com/kyte/image/upload/playwings/web/bi_playwings_black.svg"
+             class="bi" id="bi-black" alt="플레이윙즈 로고">
+        <img src="https://res.cloudinary.com/kyte/image/upload/playwings/web/bi_playwings_white.svg"
+             class="bi" id="bi-white" alt="플레이윙즈 로고">
+    </a>
+</div>
+</header>
+  <div class="intro-guide">
+    <div class="intro-title">
+        <h1 id="title"></h1>
+    </div>
+    <div class="overlay-guide"></div>
+</div>
+<div id="section" class="wrap">
+    <div class="lnb-wrapper">
+        <ul class="lnb lnb-web" id="lnbMenu">
+            <li id="side-menu" class="scroll-move active"></li>
+        </ul>
+    </div>
+    <div class="content-body">
+        <div style="padding-top: 64px;min-height: 100vh" id="content"></div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/guide.js"></script>
+<script>
+    const parameters = getParameters();
+    const id = parameters.id || '3paoKNU5SEToP3hghC8RvM';
+    const baseUrl = 'https://cdn.contentful.com/spaces/pcs8f5kjnl9o/entries/' + id + '?access_token=PPreW9r2-1xjsKymrdfXd7BMymHWgPOwujS5KU8Lq3U';
+
+    let md;
+    require(['https://cdnjs.cloudflare.com/ajax/libs/remarkable/2.0.1/remarkable.min.js'], function (remarkable) {
+        md = new remarkable.Remarkable({
+            html: true,
+            breaks: true,
+        });
+
+        //Get entry
+        fetch(baseUrl)
+                .then(response => response.json())
+                .then(function (entry) {
+                    let title;
+                    switch (entry.sys.contentType.sys.id) {
+                        case "cscenter":
+                            title = "자주 묻는 질문";
+                            break;
+
+                        default:
+                            title = "공지사항";
+                            break;
+
+                    }
+                    $('#title').html(title);
+                    $('#side-menu').html(title);
+                    $('#content').html(md.render(entry.fields.content));
+                });
+    });
+</script>
+  <!-- Footer -->
+<footer id="footer">
+  <div class="footer-container">
+    <div class="inner">
+      <div class="copyright">
+        <ul class="copy-menu">
+          <li><a href="mailto:biz@squarelab.co">제휴문의</a></li>
+          <!--<li><a href="https://playwin.gs/NOTICE" target="_blank">공지사항</a></li>
+          <li><a href="https://playwin.gs/FAQ" target="_blank">자주묻는질문</a></li>-->
+          <li><a href="/policies/terms.html">이용약관</a></li>
+          <li><strong><a href="/policies/privacy.html">개인정보처리방침</a></strong></li>
+          <li>|</li>
+          <li><a href="https://www.squarelab.co" target="_blank">회사소개</a></li>
+        </ul>
+        <p class="copy-info">
+          (주)스퀘어랩 | 04542 서울특별시 중구 청계천로 100 시그니쳐타워 서관 11층<br>
+          사업자등록번호 151-87-00987 | 통신판매업신고번호 2018-서울중구-1626호<br>
+          대표번호 1833-5861 | 이메일 contact@squarelab.co | 대표자 KIM DOYON
+        </p>
+        <p class="copy-name">&copy;
+          Square Lab
+        </p>
+      </div>
+      <div class="icons">
+        <div class="icon insta"><a href="https://www.instagram.com/playwings_app/" target="_blank"><i
+                class="ri-instagram-line social"></i></a></div>
+        <div class="icon"><a href="https://www.facebook.com/playwings" target="_blank"><i
+                class="ri-facebook-fill social"></i></a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>
