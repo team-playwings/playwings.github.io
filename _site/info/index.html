@@ -74,14 +74,14 @@
 </header>
   <div class="intro-guide">
     <div class="intro-title">
-        <h1 id="title"></h1>
+        <h1>고객센터</h1>
     </div>
     <div class="overlay-guide"></div>
 </div>
 <div id="section" class="wrap">
     <div class="lnb-wrapper">
         <ul class="lnb lnb-web" id="lnbMenu">
-            <li id="side-menu" class="scroll-move active"></li>
+            <li class="scroll-move active">고객센터</li>
         </ul>
     </div>
     <div class="content-body">
@@ -111,19 +111,6 @@
         fetch(baseUrl)
                 .then(response => response.json())
                 .then(function (entry) {
-                    let title;
-                    switch (entry.sys.contentType.sys.id) {
-                        case "cscenter":
-                            title = "자주 묻는 질문";
-                            break;
-
-                        default:
-                            title = "공지사항";
-                            break;
-
-                    }
-                    $('#title').html(title);
-                    $('#side-menu').html(title);
                     $('#content').html(md.render(entry.fields.content));
                 });
     });
