@@ -20,7 +20,10 @@
           "/deals/*",
           "/hotels",
           "/hotels/*",
-          "/setting"
+          "/setting",
+          "/magazine",
+          "/articles/*",
+          "/cityguides/*"
         ]
       }
     ]
