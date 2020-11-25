@@ -23,7 +23,8 @@
           "/setting",
           "/magazine",
           "/articles/*",
-          "/cityguides/*"
+          "/cityguides/*",
+          "/like"
         ]
       }
     ]
