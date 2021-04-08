@@ -1,13 +1,6 @@
 {
-    "name": "playwings.co.kr",
-    "short_name": "Playwings",
-    "prefer_related_applications": true,
-      "related_applications": [
-        {
-          "platform": "play",
-          "id": "com.fridaynoons.playwings"
-        }
-      ],
+    "name": "",
+    "short_name": "",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
