@@ -14,8 +14,9 @@ else
   exit 1
 fi
 
+# Do not use --delete-removed to keep gatsby website
 # --guess-mime-type --no-mime-magic is required. If not specified, css files that are uploaded to S3 will have "text/plain" MIME type.
-s3cmd sync --exclude-from .s3ignore _site/ $DEPLOY_URL --delete-removed --guess-mime-type --no-mime-magic
+s3cmd sync --exclude-from .s3ignore _site/ $DEPLOY_URL --guess-mime-type --no-mime-magic
 s3cmd modify --add-header='content-type':'application/json' ${DEPLOY_URL}/.well-known/apple-app-site-association
 
 # Clear cache in cloudfire
