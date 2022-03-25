@@ -54,11 +54,15 @@ section {
     padding-top: 80px;
 }
 
+.url a{
+    color: #0060ff;
+    text-decoration: underline;
+}
+
 section img {
     width: 100%;
     height: auto;
-    margin: 48px 0;
-
+    margin: 24px 0 ;
 }
 
 section h1 {
@@ -95,6 +99,10 @@ section table tr td {
 section table tr td:first-child {
     font-weight: bold;
     width: 150px;
+}
+
+section ol{
+    padding-inline-start: 20px;
 }
 
 hr {
