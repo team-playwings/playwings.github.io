@@ -13,12 +13,12 @@ table i {
 
 .intro-guide {
     width: 100vw;
-    height: 500px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    background: url(https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/web/banner-guide/hero-2);
+    background: url(https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/web/hero);
     background-size: cover;
     background-position: center;
 }
@@ -33,7 +33,7 @@ table i {
 .overlay-guide {
     background-color: rgba(0, 0, 0, .6);
     width: 100%;
-    height: 500px;
+    height: 400px;
     top: 0;
     left: 0;
     position: absolute;
