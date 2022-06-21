@@ -11,7 +11,7 @@ a:hover,
 }
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'IBM Plex Sans KR', sans-serif;
   font-weight: 400;
   font-size: 12pt;
   line-height: 1.65em;
@@ -46,27 +46,24 @@ p {
 /* header */
 #header {
   width: 100vw;
-  height: 72px;
+  height: 56px;
   top: 0;
   left: 0;
   position: fixed;
   z-index: 300;
   display: flex;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0);
-  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  box-Shadow: 0px 1px 0px rgba(0, 0, 0, .12);
 }
 
 #header-container {
   width: 1080px;
-  height: 72px;
   position: relative;
 }
 
 .bi {
-  left: 0;
-  top: 50%;
-  transform: translate(0, -50%);
+  margin-top: 10px;
+  width: 111px;
   position: absolute;
 }
 

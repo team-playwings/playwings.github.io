@@ -20,8 +20,9 @@ window.onload = function () {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".header", {
-        backgroundColor: "rgba(255, 255, 255, 1)",
-        borderBottom: "1px solid rgba(0,0,0,.12)",
+        backgroundColor: "rgba(255, 255, 255, .87)",
+        boxShadow: "0px 1px 0px rgba(0, 0, 0, .12)",
+        backdropFilter: "blur(6px)",
         scrollTrigger: {
             trigger: ".content-body",
             start: "top-=" + $(".header").height(),
