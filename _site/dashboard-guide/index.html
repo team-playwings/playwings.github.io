@@ -22,7 +22,8 @@
     <title>플레이윙즈 - 윙즈오더 예약관리 시스템 메뉴얼</title>
 
     <link rel="canonical" href="/dashboard-guide/">
-    <link rel="alternate" type="application/rss+xml" title="플레이윙즈" href="/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="플레이윙즈" href="
+    /feed.xml">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -31,13 +32,16 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f63d58">
 
     <link rel="stylesheet" href="/css/main.css"/>
-    
-    <link rel="stylesheet" href="/css/guide.css"/>
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.4.0/fonts/remixicon.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/ScrollTrigger.min.js"></script>
+    <script src="/js/common.js"></script>
 
     <script type="application/ld+json">
         {
@@ -64,133 +68,151 @@
         <img src="https://res.cloudinary.com/kyte/image/upload/playwings/web/bi_playwings_white.svg"
              class="bi" id="bi-white" alt="플레이윙즈 로고">
     </a>
+    <div id="nav">
+        <ul>
+            <li ><a href="/banner-guide">소재 제작 가이드</a></li>
+            <li ><a href="/brand-resources">브랜드 리소스</a></li>
+            <li ><a href="/deal">특가 상품 등록</a></li>
+        </ul>
+    </div>
 </div>
 </header>
   <div class="intro-guide">
     <div class="intro-title">
-        <h1>윙즈오더 예약관리 시스템 메뉴</h1>
+        <h1>윙즈오더 예약관리</h1>
     </div>
     <div class="overlay-guide"></div>
 </div>
-<div id="section" class="wrap">
-    <div class="lnb-wrapper">
-        <div class="lnb-button">
-            <button onclick="lnbDropDown()">브랜드 리소스 <i class="ri-arrow-down-s-line"></i></button>
+<div id='content'>
+    <div id="section" class="wrap">
+        <div class="lnb-wrapper">
+            <ul class="lnb lnb-web" id="lnbMenu">
+                <a href="#dashboard-1">
+                    <li>로그인</li>
+                </a>
+                <a href="#dashboard-2">
+                    <li>Analytics</li>
+                </a>
+                <a href="#dashboard-3">
+                    <li>Vouchers</li>
+                </a>
+                <a href="#dashboard-4">
+                    <li>Vouchers : 예약확정</li>
+                </a>
+                <a href="#dashboard-5">
+                    <li>Vouchers : 오버부킹</li>
+                </a>
+                <a href="#dashboard-6">
+                    <li>Vouchers : 구매취소</li>
+                </a>
+                <a href="#dashboard-7">
+                    <li>Vouchers : 예약재확정</li>
+                </a>
+                <a href="#dashboard-8">
+                    <li>Vouchers : 메모&히스토리</li>
+                </a>
+            </ul>
         </div>
-        <ul class="lnb lnb-web" id="lnbMenu">
-            <a href="#dashboard-1">
-                <li class="scroll-move">로그인</li>
-            </a>
-            <a href="#dashboard-2">
-                <li class="scroll-move">Analytics</li>
-            </a>
-            <a href="#dashboard-3">
-                <li class="scroll-move">Vouchers</li>
-            </a>
-            <a href="#dashboard-4">
-                <li class="scroll-move">Vouchers : 예약확정</li>
-            </a>
-            <a href="#dashboard-5">
-                <li class="scroll-move">Vouchers : 오버부킹</li>
-            </a>
-            <a href="#dashboard-6">
-                <li class="scroll-move">Vouchers : 구매취소</li>
-            </a>
-            <a href="#dashboard-7">
-                <li class="scroll-move">Vouchers : 예약재확정</li>
-            </a>
-            <a href="#dashboard-8">
-                <li class="scroll-move">Vouchers : 메모&히스토리</li>
-            </a>
-        </ul>
-    </div>
-    <div class="content-body">
-        <section id="dashboard-1">
-            <h1>로그인</h1>
-            <img src="https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/web/dashboard-guide/dashboard-login.jpg">
-            <p><span class="url"><a href="https://dashboard.playwings.co.kr/" target='_blank'>https://dashboard.playwings.co.kr/</a></span>로 접속하여, 사전에 접근권한 신청한 계정으로 로그인 진행</p><br>
-            <hr>
-        </section>
-        <section id="dashboard-2">
+        <div class="content-body">
+            <section id="dashboard-1">
+                <h1>로그인</h1>
+                <img src="https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/web/dashboard-guide/dashboard-login.jpg">
+                <p><span class="url"><a href="https://dashboard.playwings.co.kr/" target='_blank'>https://dashboard.playwings.co.kr/</a></span>로
+                    접속하여, 사전에 접근권한 신청한 계정으로 로그인 진행</p>
+            </section>
+            <section id="dashboard-2">
                 <h1>Wingsorder > Analytics</h1>
-            <img src="https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/web/dashboard-guide/dashboard-analytics.jpg">
-            <ol>
-                <li>메뉴에서는 귀사에서 공급한 상품의 판매 현황 및 결과를 확인할 수 있습니다.(판매시작일시, 판매종료일시, 상품명, 옵션별 구매 및 취소수, 총결제수, 총 결제취소수, 실 결제수, 총 결제 금액, 총 환불 금액, 실 매출금액)</li>
-                <li>우측 상단의 캘린더 버튼으로 기간 설정하여 확인 가능하며, Export Chart, Export Table 버튼으로 차트와 테이블을 내보내기 할 수 있습니다.</li>
-            </ol><br>
-            <hr>
-        </section>
-        <section id="dashboard-3">
-            <h1>Wingsorder > Vouchers</h1>
-            <img src="https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/web/dashboard-guide/dashboard-vouchers.jpg">
-            <ol>
-                <li>Vouchers 테이블에는, 귀사에서 진행한 모든 상품의 결제 내역 확인 및 예약 관리가 가능합니다.</li>
-                <li>테이블에서는 구매번호, 구매일시, 구매자, 구매상태, 컨펌번호, 체크인&체크아웃, 취소일시, 상품명, 구매옵션, 구매수, 구매합계, 제공가, 상품금액, 할인금액, 결제금액, 연락처등 확인 가능합니다.</li>
-                <li>우측상단의 내보내기를 통하여 csv 파일로 저장 가능합니다.</li>
-                <li>사용자의 구매상태로는, 6가지 상태가 존재하며 각 상태의 설명은 하기와 같습니다.</li>
-            </ol><br>
-            <table>
-                <tr>
-                    <td>PREPARED</td>
-                    <td>사용자가 결제 페이지에 머문 상태</td>
-                </tr>
-                <tr>
-                    <td>PAID</td>
-                    <td>결제 완료된 상태</td>
-                </tr>
-                <tr>
-                    <td>CANCELED</td>
-                    <td>결제 후, 취소한 상태</td>
-                </tr>
-                <tr>
-                    <td>FAILED</td>
-                    <td>네트워크 혹은 시스템문제로 결제 실패한 상태</td>
-                </tr>
-                <tr>
-                    <td>CONFIRMED</td>
-                    <td>결제완료건(PAID) -> 예약 담당자가 예약확정 완료한 상태</td>
-                </tr>                
-                <tr>
-                    <td>OVERBOOKED</td>
-                    <td>사용자 투숙일 지정일의 재고 부족 혹은 호텔 내부 사정으로 오버부킹 처리된 상태</td>
-                </tr>
-            </table>
-            <hr>
-        </section>
-        <section id="dashboard-4">
+                <img src="https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/web/dashboard-guide/dashboard-analytics.jpg">
+                <ol>
+                    <li>메뉴에서는 귀사에서 공급한 상품의 판매 현황 및 결과를 확인할 수 있습니다.(판매시작일시, 판매종료일시, 상품명, 옵션별 구매 및 취소수, 총결제수, 총 결제취소수, 실
+                        결제수,
+                        총 결제 금액, 총 환불 금액, 실 매출금액)
+                    </li>
+                    <li>우측 상단의 캘린더 버튼으로 기간 설정하여 확인 가능하며, Export Chart, Export Table 버튼으로 차트와 테이블을 내보내기 할 수 있습니다.</li>
+                </ol>
+            </section>
+            <section id="dashboard-3">
+                <h1>Wingsorder > Vouchers</h1>
+                <img src="https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/web/dashboard-guide/dashboard-vouchers.jpg">
+                <ol>
+                    <li>Vouchers 테이블에는, 귀사에서 진행한 모든 상품의 결제 내역 확인 및 예약 관리가 가능합니다.</li>
+                    <li>테이블에서는 구매번호, 구매일시, 구매자, 구매상태, 컨펌번호, 체크인&체크아웃, 취소일시, 상품명, 구매옵션, 구매수, 구매합계, 제공가, 상품금액, 할인금액, 결제금액,
+                        연락처등 확인 가능합니다.
+                    </li>
+                    <li>우측상단의 내보내기를 통하여 csv 파일로 저장 가능합니다.</li>
+                    <li>사용자의 구매상태로는, 6가지 상태가 존재하며 각 상태의 설명은 하기와 같습니다.</li>
+                </ol>
+                <br>
+                <table>
+                    <tr>
+                        <td>PREPARED</td>
+                        <td>사용자가 결제 페이지에 머문 상태</td>
+                    </tr>
+                    <tr>
+                        <td>PAID</td>
+                        <td>결제 완료된 상태</td>
+                    </tr>
+                    <tr>
+                        <td>CANCELED</td>
+                        <td>결제 후, 취소한 상태</td>
+                    </tr>
+                    <tr>
+                        <td>FAILED</td>
+                        <td>네트워크 혹은 시스템문제로 결제 실패한 상태</td>
+                    </tr>
+                    <tr>
+                        <td>CONFIRMED</td>
+                        <td>결제완료건(PAID) -> 예약 담당자가 예약확정 완료한 상태</td>
+                    </tr>
+                    <tr>
+                        <td>OVERBOOKED</td>
+                        <td>사용자 투숙일 지정일의 재고 부족 혹은 호텔 내부 사정으로 오버부킹 처리된 상태</td>
+                    </tr>
+                </table>
+            </section>
+            <section id="dashboard-4">
                 <h1>Wingsorder > Vouchers : 예약확정</h1>
                 <img src="https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/web/dashboard-guide/dashboard-vouchers-confirm-1.jpg">
                 <ol>
                     <li>첫번째 열의 구매번호를 클릭하면 예약 상세 페이지로 이동할 수 있습니다.</li>
-                    <li><span class="active">컨펌번호</span>의 경우, 예약담당자가 <span class="active">예약확정 마지막 단계에 직접 입력</span>하므로 공란으로 노출 됩니다.</li>
+                    <li><span class="active">컨펌번호</span>의 경우, 예약담당자가 <span class="active">예약확정 마지막 단계에 직접 입력</span>하므로
+                        공란으로
+                        노출 됩니다.
+                    </li>
                 </ol>
                 <img src="https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/web/dashboard-guide/dashboard-vouchers-confirm-2.png    ">
-                <ol start="3"]>
+                <ol start="3" ]>
                     <li>예약 상세페이지로 진입하여, 사용자의 구매정보, 구매자정보, 예약정보 등을 최종 확인 하고 우측 상단의 예약확정 버튼을 클릭합니다.</li>
                     <li>예약확정 버튼 클릭 시, 사용자에게 안내 될 알림톡을 미리 확인할 수 있습니다. (사용자 수신 알림톡 이미지 참고)</li>
-                    <li>컨펌번호 입력란은 필수값으로, 호텔 내부적으로 확인할 확정번호를 직접 입력해주신 후에 우측 하단의 예약확정 버튼을 클릭하면 예약확정이 완료됩니다. (PAID → CONFIRMED)</li>
-                </ol><br>
-                <hr>
-        </section>
-        <section id="dashboard-5">
-            <h1>Wingsorder > Vouchers : 오버부킹</h1>
-            <p>(플레이윙즈 관리자만 사용 가능)</p>
-            <img src="https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/web/dashboard-guide/dashboard-vouchers-overbooking.png">
-            <ol>
-                <li>사용자가 지정한 투숙일에 재고가 부족하거나 호텔 내부 상황으로 해당일에 투숙이 불가한 경우, 오버부킹 처리를 통한 사용자에게 투숙일 재지정을 요청할 수 있습니다. (사용자 수신 알림톡 이미지 참고)</li>
-                <li>현재 배포 버전에서는 <span class="active">플레이윙즈 관리자만 사용가능한 기능으로, 오버부킹 처리 필요시 플레이윙즈 서비스매니지먼트팀으로 요청</span> 부탁드립니다.</li>
-            </ol><br>
-            <hr>
+                    <li>컨펌번호 입력란은 필수값으로, 호텔 내부적으로 확인할 확정번호를 직접 입력해주신 후에 우측 하단의 예약확정 버튼을 클릭하면 예약확정이 완료됩니다. (PAID →
+                        CONFIRMED)
+                    </li>
+                </ol>
+            </section>
+            <section id="dashboard-5">
+                <h1>Wingsorder > Vouchers : 오버부킹</h1>
+                <p>(플레이윙즈 관리자만 사용 가능)</p>
+                <img src="https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/web/dashboard-guide/dashboard-vouchers-overbooking.png">
+                <ol>
+                    <li>사용자가 지정한 투숙일에 재고가 부족하거나 호텔 내부 상황으로 해당일에 투숙이 불가한 경우, 오버부킹 처리를 통한 사용자에게 투숙일 재지정을 요청할 수 있습니다. (사용자
+                        수신
+                        알림톡 이미지 참고)
+                    </li>
+                    <li>현재 배포 버전에서는 <span class="active">플레이윙즈 관리자만 사용가능한 기능으로, 오버부킹 처리 필요시 플레이윙즈 서비스매니지먼트팀으로 요청</span>
+                        부탁드립니다.
+                    </li>
+                </ol>
+            </section>
             <section id="dashboard-6">
                 <h1>Wingsorder > Vouchers : 구매취소</h1>
                 <img src="https://res.cloudinary.com/kyte/image/upload/q_auto,f_auto/playwings/web/dashboard-guide/dashboard-vouchers-cancel.png">
                 <ol>
                     <li>구매취소 기간이 지난 경우, 사용자가 직접 취소 불가하므로 CS인입을 통한 예약관리자가 수동으로 취소 가능합니다.</li>
-                    <li>CS는 플레이윙즈 서비스매니지먼트팀에서 접수하며, 수동취소가 필요한 명단을 일별로 업데이트하여 전달드립니다. 명단 확인 후, 예약관리자가 수동으로 취소처리 필요합니다.</li>
+                    <li>CS는 플레이윙즈 서비스매니지먼트팀에서 접수하며, 수동취소가 필요한 명단을 일별로 업데이트하여 전달드립니다. 명단 확인 후, 예약관리자가 수동으로 취소처리 필요합니다.
+                    </li>
                     <li>구매 취소 버튼 클릭 시, 사용자에게 안내 될 알림톡을 미리 확인할 수 있습니다. (사용자 수신 알림톡 이미지 참고)</li>
                     <li>취소 완료 시, 상태값은 “CANCELED”로 변경됩니다.</li>
-                </ol><br>
-                <hr>
+                </ol>
             </section>
             <section id="dashboard-7">
                 <h1>Wingsorder > Vouchers : 예약재확정</h1>
@@ -198,8 +220,7 @@
                 <ol>
                     <li>CONFIRMED상태의 예약건의 경우, 체크인/체크아웃 일정 변경, 컨펌번호 수정 등이 필요할 시, 예약재확정이 가능합니다.</li>
                     <li>예약재확정 버튼 클릭 시, 사용자에게 안내 될 알림톡을 미리 확인할 수 있습니다. (사용자 수신 알림톡 이미지 참고)</li>
-                </ol><br>
-                <hr>
+                </ol>
             </section>
             <section id="dashboard-87">
                 <h1>Wingsorder > Vouchers : 메모 & 히스토리</h1>
@@ -209,13 +230,13 @@
                     <li>좌측 하단의 히스토리 기능을 통해 변경 및 업데이트 기록을 확인할 수 있습니다.</li>
                 </ol>
             </section>
+        </div>
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/ScrollTrigger.min.js"></script>
-<script src="/js/common.js"></script>
 <script src="/js/guide.js"></script>
   <!-- Footer -->
 <footer id="footer">

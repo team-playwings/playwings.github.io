@@ -29,17 +29,36 @@ function changeVideo() {
         width = window.outerWidth;
         hero[0].load();
     }
-};
-
-function getParameters() {
-    const parameters = {};
-    const vars = window.location.search.substring(1).split('&');
-    let pair;
-    for (let i = 0; i < vars.length; i++) {
-        pair = vars[i].split('=');
-        if (typeof parameters[pair[0]] === 'undefined') parameters[pair[0]] = pair[1];
-        else if (typeof parameters[pair[0]] === 'string') parameters[pair[0]] = [parameters[pair[0]], pair[1]];
-        else parameters[pair[0]].push(pair[1]);
-    }
-    return parameters;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".header", {
+        backgroundColor: "rgba(255, 255, 255, .87)",
+        boxShadow: "0px 1px 0px rgba(0, 0, 0, .12)",
+        backdropFilter: "blur(6px)",
+        scrollTrigger: {
+            trigger: "#content",
+            start: "top-=" + $(".header").height(),
+            end: "top",
+            scrub: true,
+            //onUpdate: ({progress}) => onUpdate(progress),
+            //onToggle: self => onToggle(self.isActive),
+            onEnter: onEnter,
+            onEnterBack: onEnterBack
+        },
+    });
+
+    function onEnter() {
+        $("#bi-white")[0].style.display = "none";
+        $("#bi-black")[0].style.display = "block";
+        $("#nav")[0].className = "nav";
+    }
+
+    function onEnterBack() {
+        $("#bi-white")[0].style.display = "block";
+        $("#bi-black")[0].style.display = "none";
+        $("#nav")[0].className = "";
+    }
+})

@@ -22,7 +22,8 @@
     <title>플레이윙즈 - 개인정보처리방침</title>
 
     <link rel="canonical" href="/policies/privacy.html">
-    <link rel="alternate" type="application/rss+xml" title="플레이윙즈" href="/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="플레이윙즈" href="
+    /feed.xml">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -31,13 +32,16 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f63d58">
 
     <link rel="stylesheet" href="/css/main.css"/>
-    
-    <link rel="stylesheet" href="/css/guide.css"/>
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.4.0/fonts/remixicon.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/ScrollTrigger.min.js"></script>
+    <script src="/js/common.js"></script>
 
     <script type="application/ld+json">
         {
@@ -64,6 +68,13 @@
         <img src="https://res.cloudinary.com/kyte/image/upload/playwings/web/bi_playwings_white.svg"
              class="bi" id="bi-white" alt="플레이윙즈 로고">
     </a>
+    <div id="nav">
+        <ul>
+            <li ><a href="/banner-guide">소재 제작 가이드</a></li>
+            <li ><a href="/brand-resources">브랜드 리소스</a></li>
+            <li ><a href="/deal">특가 상품 등록</a></li>
+        </ul>
+    </div>
 </div>
 </header>
   <div class="intro-guide">
@@ -76,7 +87,7 @@
   <div class="lnb-wrapper">
     <ul class="lnb lnb-web" id="lnbMenu">
       <a href="/policies/terms.html">
-        <li class="scroll-move">이용약관</li>
+        <li>이용약관</li>
       </a>
       <a href="/policies/privacy.html">
         <li class="scroll-move active">개인정보처리방침</li>

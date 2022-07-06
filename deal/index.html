@@ -1,0 +1,176 @@
+---
+layout: default
+category: guide
+title: 특가 상품 등록
+---
+<div class="intro-guide">
+    <div class="intro-title">
+        <h1>특가 상품 등록</h1>
+    </div>
+    <div class="overlay-guide"></div>
+</div>
+<div id='content'>
+    <div id="section" class="wrap">
+        <div class="lnb-wrapper">
+            <ul class="lnb lnb-web" id="lnbMenu">
+                <a id="menu_flight" href="#" class="active">
+                    <li>항공</li>
+                </a>
+                <a id="menu_hotel" href="#">
+                    <li>호텔</li>
+                </a>
+                <a id="menu_activity" href="#">
+                    <li>투어&액티비티</li>
+                </a>
+                <a id="menu_package" href="#">
+                    <li>패키지</li>
+                </a>
+            </ul>
+        </div>
+        <div class="content-body">
+            <div id="thanks" style="display:none">
+                <h3>특가 상품 등록 요청 완료되었습니다.</h3>
+                <p>특가 상품 정보를 공유해주셔서 감사드려요. 🙌<br>
+                    입력해주신 담당자 이메일로 안내 메시지가 발송 되었습니다.</p>
+                <p class="caption">만약 안내 메일을 받지 못하셨다면 biz@squarelab.co로 문의해주세요.</p>
+            </div>
+            <section id="flight">
+                <form id="form"
+                      action="https://script.google.com/a/macros/squarelab.co/s/AKfycbxqnHQCXYubvl9XQwaGAc-JGkhMBaKASwVnhd5KRgbYlueISUep6KqCP6JX2OqmPs0LIw/exec"
+                      method="POST">
+                    <h1>항공</h1>
+                    <input type="text" class="form-control" name="type" value="항공" style="display:none">
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label>회사명 *</label>
+                            <p>회사명 또는 브랜드명을 입력해주세요.</p>
+                            <input type="text" class="form-control" name="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label>특가 상품 제목 *</label>
+                            <p>띄어쓰기 포함 24자 이내로 입력해주세요.</p>
+                            <input type="text" class="form-control" name="title" maxlength="20" required>
+                        </div>
+                        <div class="form-group">
+                            <label>랜딩 URL *</label>
+                            <p>링크를 입력해 주세요. UTM 삽입이 가능합니다.</p>
+                            <input type="url" class="form-control" name="url" required>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label>노출 희망 일시 *</label>
+                            <p>플레이윙즈에 노출을 희망하는 일시를 입력해주세요.</p>
+                            <input type="text" class="form-control" name="exposure_start_date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>판매 기간 *</label>
+                            <p>특가 상품이 판매되는 기간을 입력해주세요.</p>
+                            <input type="text" class="form-control" name="selling_periods" required>
+                        </div>
+                        <div class="form-group">
+                            <label>탑승 기간 *</label>
+                            <p>항공 탑승 기간을 입력해주세요.</p>
+                            <input type="text" class="form-control" name="usage_period" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>상품별 금액 *</label>
+                        <p>1개 이상 입력해주세요.</p>
+                        <table>
+                            <tr>
+                                <td><input type="text" placeholder="출발지" class="form-control" name="fare_1a" required></td>
+                                <td><input type="text" placeholder="도착지" class="form-control" name="fare_1b" required></td>
+                                <td><input type="text" placeholder="금액" class="form-control" name="fare_1c" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="출발지" class="form-control" name="fare_2a"></td>
+                                <td><input type="text" placeholder="도착지" class="form-control" name="fare_2b"></td>
+                                <td><input type="text" placeholder="금액" class="form-control" name="fare_2c"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="출발지" class="form-control" name="fare_3a"></td>
+                                <td><input type="text" placeholder="도착지" class="form-control" name="fare_3b"></td>
+                                <td><input type="text" placeholder="금액" class="form-control" name="fare_3c"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="출발지" class="form-control" name="fare_4a"></td>
+                                <td><input type="text" placeholder="도착지" class="form-control" name="fare_4b"></td>
+                                <td><input type="text" placeholder="금액" class="form-control" name="fare_4c"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="출발지" class="form-control" name="fare_5a"></td>
+                                <td><input type="text" placeholder="도착지" class="form-control" name="fare_5b"></td>
+                                <td><input type="text" placeholder="금액" class="form-control" name="fare_5c"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="form-group">
+                        <label>이미지 *</label>
+                        <ul>
+                            <li><a href="/banner-guide/#guide-7" target="_blank">소재 제작 가이드</a>를 참고해 최상단 이미지와 카드형 이미지를
+                                제작해주세요.
+                            </li>
+                            <li>편집이 가능한 PSD 형식을 권장하며, 파일명은 "회사명_특가상품제목.psd"를 사용해주세요.</li>
+                        </ul>
+                        <div class="upload_multiple_images_holder"></div>
+                        <a id="upload_widget" class="cloudinary-button">이미지 업로드</a>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label>담당자 연락처 *</label>
+                            <p>이름</p>
+                            <input type="text" class="form-control" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>&nbsp;</label>
+                            <p>이메일</p>
+                            <input type="email" class="form-control" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>&nbsp;</label>
+                            <p>전화번호</p>
+                            <input type="tel" class="form-control" name="tel" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>세일즈 포인트</label>
+                        <textarea class="form-control" rows="5" name="sales_point"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>문의사항</label>
+                        <textarea class="form-control" rows="5" name="message"></textarea>
+                    </div>
+                    <blockquote>
+                        아래와 같은 특가 상품은 등록이 어려울 수 있습니다.
+                        <ul>
+                            <li>여행 카테고리와 관련성이 없는 특가 상품</li>
+                            <li>선착순/랜덤 형식의 특가 상품</li>
+                        </ul>
+                    </blockquote>
+                    <button type="submit" class="btn float-right" onclick="submitForm()" id="submitButton">등록 요청
+                    </button>
+                </form>
+                <iframe name="hiddenFrame" id="hiddenFrame" style="display:none"></iframe>
+            </section>
+            <section id="hotel" style="display: none">
+                <h1>호텔</h1>
+                <p>TBD</p>
+            </section>
+            <section id="activity" style="display: none">
+                <h1>투어&액티비티</h1>
+                <p>TBD</p>
+            </section>
+            <section id="package" style="display: none">
+                <h1>패키지</h1>
+                <p>TBD</p>
+            </section>
+        </div>
+    </div>
+</div>
+<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+<script src="/js/deal.js"></script>
