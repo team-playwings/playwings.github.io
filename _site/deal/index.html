@@ -103,17 +103,17 @@
         </div>
         <div class="content-body">
             <div id="thanks" style="display:none">
-                <h3>특가 상품 등록 요청 완료되었습니다.</h3>
+                <h3>특가 상품 등록 요청이 완료되었습니다.</h3>
                 <p>특가 상품 정보를 공유해주셔서 감사드려요. 🙌<br>
                     입력해주신 담당자 이메일로 안내 메시지가 발송 되었습니다.</p>
                 <p class="caption">만약 안내 메일을 받지 못하셨다면 biz@squarelab.co로 문의해주세요.</p>
             </div>
-            <section id="flight">
+            <section id="deal">
                 <form id="form"
                       action="https://script.google.com/a/macros/squarelab.co/s/AKfycbz33jFK22xAXX0hbicJvzXf7ODLLKfrZAdPLw7TUyaDlMPc7UL2eWuG3VEj9VaNOFvrNw/exec"
                       method="POST">
-                    <h1>항공</h1>
-                    <input type="text" class="form-control" name="type" value="항공" style="display:none">
+                    <h1 id="title">항공</h1>
+                    <input type="text" class="form-control" name="type" id="type" value="항공" style="display:none">
                     <div class="col-3">
                         <div class="form-group">
                             <label>회사명 *</label>
@@ -143,11 +143,12 @@
                             <input type="text" class="form-control" name="selling_periods" required>
                         </div>
                         <div class="form-group">
-                            <label>탑승 기간 *</label>
-                            <p>항공 탑승 기간을 입력해주세요.</p>
+                            <label id="usage_period_title">탑승 기간 *</label>
+                            <p id="usage_period_sub">항공 탑승 기간을 입력해주세요.</p>
                             <input type="text" class="form-control" name="usage_period" required>
                         </div>
                     </div>
+                    <!--
                     <div class="form-group">
                         <label>상품별 금액 *</label>
                         <p>1개 이상 입력해주세요.</p>
@@ -179,16 +180,17 @@
                             </tr>
                         </table>
                     </div>
+                    -->
                     <div class="form-group">
-                        <label>이미지 *</label>
+                        <label>첨부파일 *</label>
                         <ul>
-                            <li><a href="/banner-guide/#guide-7" target="_blank">소재 제작 가이드</a>를 참고해 최상단 이미지와 카드형 이미지를
-                                제작해주세요.
-                            </li>
-                            <li>편집이 가능한 PSD 형식을 권장하며, 파일명은 "회사명_특가상품제목.psd"를 사용해주세요.</li>
+                            <!--<li><a href="/banner-guide/#guide-7" target="_blank">소재 제작 가이드</a>를 참고해 최상단 이미지와 카드형 이미지를 제작해주세요.</li>-->
+                            <li>상품별 금액은 <a href="/files/회사명_특가상품제목.xlsx" target="_blank">엑셀 파일</a>을 다운로드해 작성 후 업로드해주세요.</li>
+                            <li>이미지 파일은 편집 가능한 PSD 형식을 권장합니다.</li>
+                            <li>파일명은 "회사명_특가상품제목.xlsx", "회사명_특가상품제목.psd"를 사용해주세요.</li>
                         </ul>
                         <div class="upload_multiple_images_holder"></div>
-                        <a id="upload_widget" class="cloudinary-button">이미지 업로드</a>
+                        <a id="upload_widget" class="cloudinary-button">업로드</a>
                     </div>
                     <div class="col-3">
                         <div class="form-group">
@@ -209,10 +211,12 @@
                     </div>
                     <div class="form-group">
                         <label>세일즈 포인트</label>
+                        <p>특가 상품에 대한 추가 정보 및 강조할 내용을 입력해주세요.</p>
                         <textarea class="form-control" rows="5" name="sales_point"></textarea>
                     </div>
                     <div class="form-group">
                         <label>문의사항</label>
+                        <p>특가 상품 등록과 관련하여 문의하실 사항을 입력해주세요.</p>
                         <textarea class="form-control" rows="5" name="message"></textarea>
                     </div>
                     <blockquote>
@@ -226,18 +230,6 @@
                     </button>
                 </form>
                 <iframe name="hiddenFrame" id="hiddenFrame" style="display:none"></iframe>
-            </section>
-            <section id="hotel" style="display: none">
-                <h1>호텔</h1>
-                <p>TBD</p>
-            </section>
-            <section id="activity" style="display: none">
-                <h1>투어&액티비티</h1>
-                <p>TBD</p>
-            </section>
-            <section id="package" style="display: none">
-                <h1>패키지</h1>
-                <p>TBD</p>
             </section>
         </div>
     </div>
