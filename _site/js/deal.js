@@ -56,6 +56,7 @@ const theDayAfterTomorrow = new Date();
 theDayAfterTomorrow.setDate(tomorrow.getDate() + 1);
 
 $('input[name="exposure_start_date"]').daterangepicker({
+    minDate: tomorrow,
     startDate: tomorrow,
     singleDatePicker: true,
     timePicker: true,
@@ -65,6 +66,7 @@ $('input[name="exposure_start_date"]').daterangepicker({
 });
 
 $('input[name="selling_periods"]').daterangepicker({
+    minDate: tomorrow,
     startDate: tomorrow,
     endDate: theDayAfterTomorrow,
     autoApply: true,
@@ -74,6 +76,7 @@ $('input[name="selling_periods"]').daterangepicker({
 });
 
 $('input[name="usage_period"]').daterangepicker({
+    minDate: tomorrow,
     startDate: tomorrow,
     endDate: theDayAfterTomorrow,
     autoApply: true,
