@@ -37,7 +37,7 @@ title: 특가 상품 등록
             </div>
             <section id="deal">
                 <form id="form"
-                      action="https://script.google.com/a/macros/squarelab.co/s/AKfycbz7lIdMT3yGnG3m8NvCv2CUCtgMZGuLRlVN0_GP8VuscU7J_913unJbGzN5LrNE-CnP3A/exec"
+                      action="https://script.google.com/a/macros/squarelab.co/s/AKfycbyMZnU0GBl-f8aL8WQYanmMU7x-Wsm3N-9StXF_CqKLqdZ84iuLbIXuP48L33Edo5q0CQ/exec"
                       method="POST">
                     <h1 id="title">항공</h1>
                     <input type="text" class="form-control" name="type" id="type" value="항공" style="display:none">
@@ -60,15 +60,22 @@ title: 특가 상품 등록
                     </div>
                     <div class="col-3">
                         <div class="form-group">
-                            <label>노출 희망 일시 *</label>
-                            <p>플레이윙즈에 노출을 희망하는 일시를 입력해주세요.</p>
+                            <label>노출 시작 일시 *</label>
+                            <p>플레이윙즈에 노출을 시작할 일시를 입력해주세요.</p>
                             <input type="text" class="form-control" name="exposure_start_date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>노출 종료 일시 *</label>
+                            <p>플레이윙즈에 노출을 종료할 일시를 입력해주세요.</p>
+                            <input type="text" class="form-control" name="exposure_end_date" required>
                         </div>
                         <div class="form-group">
                             <label>판매 기간 *</label>
                             <p>특가 상품이 판매되는 기간을 입력해주세요.</p>
                             <input type="text" class="form-control" name="selling_periods" required>
                         </div>
+                    </div>
+                    <div class="col-3">
                         <div class="form-group">
                             <label id="usage_period_title">탑승 기간 *</label>
                             <p id="usage_period_sub">항공 탑승 기간을 입력해주세요.</p>

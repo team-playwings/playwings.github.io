@@ -52,6 +52,10 @@ const tomorrow = new Date();
 tomorrow.setDate(tomorrow.getDate() + 1);
 tomorrow.setHours(0, 0, 0, 0);
 
+const tomorrowEnd = new Date();
+tomorrowEnd.setDate(tomorrow.getDate());
+tomorrowEnd.setHours(23, 59, 0, 0);
+
 const theDayAfterTomorrow = new Date();
 theDayAfterTomorrow.setDate(tomorrow.getDate() + 1);
 
@@ -60,6 +64,18 @@ $('input[name="exposure_start_date"]').daterangepicker({
     startDate: tomorrow,
     singleDatePicker: true,
     timePicker: true,
+    timePicker24Hour: true,
+    locale: {
+        format: 'YYYY. M. D hh:mm A'
+    }
+});
+
+$('input[name="exposure_end_date"]').daterangepicker({
+    minDate: tomorrowEnd,
+    startDate: tomorrowEnd,
+    singleDatePicker: true,
+    timePicker: true,
+    timePicker24Hour: true,
     locale: {
         format: 'YYYY. M. D hh:mm A'
     }
