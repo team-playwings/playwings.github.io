@@ -124,6 +124,7 @@ let myWidget = cloudinary.createUploadWidget({
         uploadPreset: 'xm6nvbrf',
         folder: 'playwings/widget',
         sources: ['local'],
+        overwrite: true,
         showAdvanced_options: true,
         thumbnails: '.upload_multiple_images_holder'
     }, (error, result) => {
