@@ -22,7 +22,7 @@ menus.on('click', function (e) {
             type.value = '항공';
             title.innerHTML = '항공';
             usage_period_title.innerHTML = '국내선 탑승 기간';
-            usage_period_sub.innerHTML = '국내선 항공 탑승 기간을 입력해주세요.';
+            usage_period_sub.innerHTML = '해당되는 노선의 탑승 기간을 입력해주세요';
             usage_period2.style.display = 'block';
             message_sub.innerHTML = '특가 상품 등록과 관련하여 문의하실 사항을 입력해주세요.<br>노선 별로 탑승기간이 상이한 경우, 문의사항에 기재 부탁 드립니다.';
             break;
@@ -147,6 +147,7 @@ document.getElementById("upload_widget").addEventListener("click", function () {
 function submitForm() {
     if (document.getElementsByClassName('upload_multiple_images_holder')[0].children.length == 0) {
         alert("첨부파일을 업로드해주세요.");
+        window.event.preventDefault();
         return;
     }
 
