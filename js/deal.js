@@ -21,7 +21,7 @@ menus.on('click', function (e) {
         case 'menu_flight':
             type.value = '항공';
             title.innerHTML = '항공';
-            usage_period_title.innerHTML = '국내선 탑승 기간 *';
+            usage_period_title.innerHTML = '국내선 탑승 기간';
             usage_period_sub.innerHTML = '국내선 항공 탑승 기간을 입력해주세요.';
             usage_period2.style.display = 'block';
             message_sub.innerHTML = '특가 상품 등록과 관련하여 문의하실 사항을 입력해주세요.<br>노선 별로 탑승기간이 상이한 경우, 문의사항에 기재 부탁 드립니다.';
@@ -30,7 +30,7 @@ menus.on('click', function (e) {
         case 'menu_hotel':
             type.value = '호텔';
             title.innerHTML = '호텔';
-            usage_period_title.innerHTML = '투숙 기간 *';
+            usage_period_title.innerHTML = '투숙 기간';
             usage_period_sub.innerHTML = '호텔 투숙 기간을 입력해주세요.';
             usage_period2.style.display = 'none';
             message_sub.innerHTML = '특가 상품 등록과 관련하여 문의하실 사항을 입력해주세요.<br>상품 별로 투숙기간이 상이한 경우, 문의사항에 기재 부탁 드립니다.';
@@ -39,7 +39,7 @@ menus.on('click', function (e) {
         case 'menu_activity':
             type.value = '투어&액티비티';
             title.innerHTML = '투어&액티비티';
-            usage_period_title.innerHTML = '사용 기간 *';
+            usage_period_title.innerHTML = '사용 기간';
             usage_period_sub.innerHTML = '상품 사용 기간을 입력해주세요.';
             usage_period2.style.display = 'none';
             message_sub.innerHTML = '특가 상품 등록과 관련하여 문의하실 사항을 입력해주세요.<br>상품 별로 사용기간이 상이한 경우, 문의사항에 기재 부탁 드립니다.';
@@ -48,7 +48,7 @@ menus.on('click', function (e) {
         case 'menu_package':
             type.value = '패키지';
             title.innerHTML = '패키지';
-            usage_period_title.innerHTML = '사용 기간 *';
+            usage_period_title.innerHTML = '사용 기간';
             usage_period_sub.innerHTML = '상품 사용 기간을 입력해주세요.';
             usage_period2.style.display = 'none';
             message_sub.innerHTML = '특가 상품 등록과 관련하여 문의하실 사항을 입력해주세요.<br>상품 별로 사용기간이 상이한 경우, 문의사항에 기재 부탁 드립니다.';
@@ -99,6 +99,7 @@ $('input[name="selling_periods"]').daterangepicker({
     }
 });
 
+/*
 $('input[name="usage_period"]').daterangepicker({
     minDate: tomorrow,
     startDate: tomorrow,
@@ -118,13 +119,13 @@ $('input[name="usage_period2"]').daterangepicker({
         format: 'YYYY. M. D'
     }
 });
+*/
 
 let myWidget = cloudinary.createUploadWidget({
         cloudName: 'kyte',
         uploadPreset: 'xm6nvbrf',
         folder: 'playwings/widget',
         sources: ['local'],
-        overwrite: true,
         showAdvanced_options: true,
         thumbnails: '.upload_multiple_images_holder'
     }, (error, result) => {
