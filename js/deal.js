@@ -21,8 +21,10 @@ menus.on('click', function (e) {
         case 'menu_flight':
             type.value = '항공';
             title.innerHTML = '항공';
-            usage_period_title.innerHTML = '탑승 기간 *';
-            usage_period_sub.innerHTML = '항공 탑승 기간을 입력해주세요.';
+            usage_period_title.innerHTML = '국내선 탑승 기간 *';
+            usage_period_sub.innerHTML = '국내선 항공 탑승 기간을 입력해주세요.';
+            usage_period2.style.display = 'block';
+            message_sub.innerHTML = '특가 상품 등록과 관련하여 문의하실 사항을 입력해주세요.<br>노선 별로 탑승기간이 상이한 경우, 문의사항에 기재 부탁 드립니다.';
             break;
 
         case 'menu_hotel':
@@ -30,6 +32,8 @@ menus.on('click', function (e) {
             title.innerHTML = '호텔';
             usage_period_title.innerHTML = '투숙 기간 *';
             usage_period_sub.innerHTML = '호텔 투숙 기간을 입력해주세요.';
+            usage_period2.style.display = 'none';
+            message_sub.innerHTML = '특가 상품 등록과 관련하여 문의하실 사항을 입력해주세요.<br>상품 별로 투숙기간이 상이한 경우, 문의사항에 기재 부탁 드립니다.';
             break;
 
         case 'menu_activity':
@@ -37,6 +41,8 @@ menus.on('click', function (e) {
             title.innerHTML = '투어&액티비티';
             usage_period_title.innerHTML = '사용 기간 *';
             usage_period_sub.innerHTML = '상품 사용 기간을 입력해주세요.';
+            usage_period2.style.display = 'none';
+            message_sub.innerHTML = '특가 상품 등록과 관련하여 문의하실 사항을 입력해주세요.<br>상품 별로 사용기간이 상이한 경우, 문의사항에 기재 부탁 드립니다.';
             break;
 
         case 'menu_package':
@@ -44,6 +50,8 @@ menus.on('click', function (e) {
             title.innerHTML = '패키지';
             usage_period_title.innerHTML = '사용 기간 *';
             usage_period_sub.innerHTML = '상품 사용 기간을 입력해주세요.';
+            usage_period2.style.display = 'none';
+            message_sub.innerHTML = '특가 상품 등록과 관련하여 문의하실 사항을 입력해주세요.<br>상품 별로 사용기간이 상이한 경우, 문의사항에 기재 부탁 드립니다.';
             break;
     }
 });
@@ -101,6 +109,16 @@ $('input[name="usage_period"]').daterangepicker({
     }
 });
 
+$('input[name="usage_period2"]').daterangepicker({
+    minDate: tomorrow,
+    startDate: tomorrow,
+    endDate: theDayAfterTomorrow,
+    autoApply: true,
+    locale: {
+        format: 'YYYY. M. D'
+    }
+});
+
 let myWidget = cloudinary.createUploadWidget({
         cloudName: 'kyte',
         uploadPreset: 'xm6nvbrf',
@@ -129,6 +147,7 @@ function submitForm() {
         alert("첨부파일을 업로드해주세요.");
         return;
     }
+
     let form = document.getElementById('form');
     if (form.checkValidity()) {
         document.getElementById('hiddenFrame').onload = onLoad();
